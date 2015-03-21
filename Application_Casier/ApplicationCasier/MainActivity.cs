@@ -9,6 +9,7 @@ using Android.OS;
 using System.Collections.Generic;
 using Android.Support.V4.Widget;
 using System.Net.Sockets;
+using Android.Support.V4.App;
 
 namespace ApplicationCasier
 {
@@ -28,7 +29,7 @@ namespace ApplicationCasier
 
 			//mise en place de l'ip et du port : 
 			Ap = new User_Application(GetString(Resource.String.ip),int.Parse(GetString(Resource.String.port))); 
-
+			var newFragment = new Myfragment (); 
 			mDrawerLayout = FindViewById<DrawerLayout> (Resource.Id.myDrawer); 
 			mDrawer = FindViewById<ListView> (Resource.Id.ListView); 
 			var toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
@@ -42,7 +43,11 @@ namespace ApplicationCasier
 			listItem.Add ("Réservation");
 
 			mAdapter = new ArrayAdapter (this,Resource.Layout.SingleRow,Resource.Id.tvTitle, listItem); 
-			mDrawer.Adapter = mAdapter; 
+			mDrawer.Adapter = mAdapter;
+
+			var ft = FragmentManager.BeginTransaction ();
+			ft.Add (Resource.Id.fragment_container, newFragment);
+			ft.Commit ();
 
 			mDrawer.ItemClick += listView_ItemClick;
 

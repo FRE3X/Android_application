@@ -1120,8 +1120,8 @@ namespace ApplicationCasier
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080042
-			public const int ListView = 2131230786;
+			// aapt resource value: 0x7f080043
+			public const int ListView = 2131230787;
 			
 			// aapt resource value: 0x7f080031
 			public const int action_bar = 2131230769;
@@ -1162,8 +1162,8 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080020
 			public const int action_mode_close_button = 2131230752;
 			
-			// aapt resource value: 0x7f080045
-			public const int action_settings = 2131230789;
+			// aapt resource value: 0x7f080047
+			public const int action_settings = 2131230791;
 			
 			// aapt resource value: 0x7f080021
 			public const int activity_chooser_view_content = 2131230753;
@@ -1210,6 +1210,9 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080028
 			public const int expanded_menu = 2131230760;
 			
+			// aapt resource value: 0x7f080044
+			public const int fragment_container = 2131230788;
+			
 			// aapt resource value: 0x7f080004
 			public const int home = 2131230724;
 			
@@ -1225,8 +1228,8 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080023
 			public const int image = 2131230755;
 			
-			// aapt resource value: 0x7f080043
-			public const int ivIcon = 2131230787;
+			// aapt resource value: 0x7f080045
+			public const int ivIcon = 2131230789;
 			
 			// aapt resource value: 0x7f080009
 			public const int listMode = 2131230729;
@@ -1239,6 +1242,9 @@ namespace ApplicationCasier
 			
 			// aapt resource value: 0x7f08003f
 			public const int myDrawer = 2131230783;
+			
+			// aapt resource value: 0x7f080042
+			public const int my_fragment = 2131230786;
 			
 			// aapt resource value: 0x7f080019
 			public const int never = 2131230745;
@@ -1315,8 +1321,8 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080041
 			public const int toolbar = 2131230785;
 			
-			// aapt resource value: 0x7f080044
-			public const int tvTitle = 2131230788;
+			// aapt resource value: 0x7f080046
+			public const int tvTitle = 2131230790;
 			
 			// aapt resource value: 0x7f080008
 			public const int up = 2131230728;
@@ -1432,10 +1438,13 @@ namespace ApplicationCasier
 			public const int Main = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int SingleRow = 2130903064;
+			public const int MyFragment = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int support_simple_spinner_dropdown_item = 2130903065;
+			public const int SingleRow = 2130903065;
+			
+			// aapt resource value: 0x7f03001a
+			public const int support_simple_spinner_dropdown_item = 2130903066;
 			
 			static Layout()
 			{

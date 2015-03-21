@@ -1,8 +1,0 @@
-/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/ApplicationCasier/ApplicationCasier/bin/Release/ApplicationCasier.dll
-/Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.dll
-/Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.Xml.dll
-/Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v5.0/Mono.Android.dll
-/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/ApplicationCasier/packages/Xamarin.Android.Support.v4.21.0.3.0/lib/MonoAndroid10/Xamarin.Android.Support.v4.dll
-/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/ApplicationCasier/packages/Xamarin.Android.Support.v7.AppCompat.21.0.3.0/lib/MonoAndroid403/Xamarin.Android.Support.v7.AppCompat.dll
-/Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.Core.dll
-/Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/mscorlib.dll

@@ -59,6 +59,15 @@ public class User_Application {
 	}
 
 	public char[] DemandeCasier(){
+		connection ();
+
+		Byte[] message_reception = new byte[5]; 
+
+
+		s.Receive (message_reception);
+
+
+		s.Close ();
 
 		return null;
 	}
@@ -101,7 +110,7 @@ public class User_Application {
 		s.Send (message, message.Length, 0); 
 
 		//fermeture du soket 
-		s.Close (); 
+		s.Close(); 
 	}
 
 	public void connection(){

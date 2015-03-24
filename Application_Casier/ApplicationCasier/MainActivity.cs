@@ -73,7 +73,7 @@ namespace ApplicationCasier
 					 	
 					try {
 						//Appelle de la méthode actualiser : 
-						Ap.EnvoiAddrMAC ();
+						Ap.DemandeCasier ();
 
 					
 					} catch (SocketException j) {//Capture de SocketException

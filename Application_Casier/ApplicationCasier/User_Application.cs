@@ -47,14 +47,7 @@ public class User_Application {
 	public int Actualiser(){
 		EnvoiAddrMAC (); 
 
-//		Byte[] message = new byte[5];   
-//
-//		s.Receive (message, SocketFlags.None);
-//
-//		s.Close (); 
-//
-//		int m = Convert.ToInt16(message); 
-//
+
 		return 0;
 	}
 

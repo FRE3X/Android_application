@@ -15,11 +15,11 @@
             android:layout_height="wrap_content"
             android:minHeight="?android:attr/actionBarSize"
             android:background="?android:attr/colorPrimary" />
-        <fragment
-            class="createafragment.Myfragment"
-            android:id="@+id/my_fragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:layout_gravity="center" />
     </FrameLayout>
     <ListView
         android:theme="@android:style/Theme.Material.Light"

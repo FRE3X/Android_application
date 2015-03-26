@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using Android.Support.V4.Widget;
 using System.Net.Sockets;
 using Android.Support.V4.App;
+using Android.Support.V4;
 
 namespace ApplicationCasier
 {
@@ -33,7 +34,7 @@ namespace ApplicationCasier
 			mDrawerLayout = FindViewById<DrawerLayout> (Resource.Id.myDrawer); 
 			mDrawer = FindViewById<ListView> (Resource.Id.ListView); 
 			var toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
-			SetActionBar (toolbar);
+			SetActionBar (toolbar); 
 
 			toolbar.SetNavigationIcon (Resource.Drawable.ic_launcher); 
 			toolbar.InflateMenu (Resource.Menu.menu); 
@@ -45,9 +46,9 @@ namespace ApplicationCasier
 			mAdapter = new ArrayAdapter (this,Resource.Layout.SingleRow,Resource.Id.tvTitle, listItem); 
 			mDrawer.Adapter = mAdapter;
 
-			var ft = FragmentManager.BeginTransaction ();
-			ft.Add (Resource.Id.fragment_container, newFragment);
-			ft.Commit ();
+			//var ft = FragmentManager.BeginTransaction ();
+			//ft.Add (Resource.Id.fragment_container, newFragment);
+			//ft.Commit ();
 
 			mDrawer.ItemClick += listView_ItemClick;
 
@@ -66,6 +67,7 @@ namespace ApplicationCasier
 			var item = this.mDrawer.GetItemAtPosition(e.Position);
 
 			switch (item.ToString()) { 
+			// En cas d'appui sur le boutton actualiser
 			case "Actualiser":
 
 				//handler est associé a MainActivity :
@@ -97,35 +99,22 @@ namespace ApplicationCasier
 
 					
 				break;
+			// En cas d'appui sur le bouton mots de passe
 			case "Mot de passe": 
 				Toast.MakeText (this, "coucou", ToastLength.Short).Show ();
 				break; 
+			// En cas d'appui sur le bouton réservation
+			case "Réservation": 
+
+				Android.App.FragmentTransaction transaction = FragmentManager.BeginTransaction(); 
+				FragmentReservation reservation = new FragmentReservation(); 
+				reservation.Show(transaction, "FragmentReservation"); 
+
+				break; 
 			}
 
-			//Make a toast with the item name just to show it was clicked
-			//Toast.MakeText(this, item.ToString() + " Clicked!", ToastLength.Short).Show();
+
 		}
-
-//		private Java.Lang.Runnable mUpdateGeneration = new Java.Lang.Runnable((SocketException k) =>
-//			{
-//				ToastException(k);
-//			});
-//
-//
-//		public void ToastException(SocketException Se){
-//			Toast toast = Toast.MakeText (this, Se.Message, ToastLength.Short);
-//			toast.SetGravity (GravityFlags.Center, 0, 0);
-//			toast.Show ();
-//		}
-//		public void error_message(SocketException Se){
-//			Toast toast = Toast.MakeText (this, Se.Message, ToastLength.Short);
-//			toast.SetGravity (GravityFlags.Center, 0, 0);
-//			toast.Show ();
-//		
-//		
-//		}
-
-
 
 
 	}

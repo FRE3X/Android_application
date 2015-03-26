@@ -1,2 +1,2 @@
-/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/ApplicationCasier/testfragement/bin/Debug/testfragement.dll
-/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/ApplicationCasier/packages/Xamarin.Android.Support.v4.21.0.3.0/lib/MonoAndroid10/Xamarin.Android.Support.v4.dll
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/testfragement/bin/Debug/testfragement.dll
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/packages/Xamarin.Android.Support.v4.21.0.3.0/lib/MonoAndroid10/Xamarin.Android.Support.v4.dll

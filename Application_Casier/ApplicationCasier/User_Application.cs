@@ -61,15 +61,15 @@ public class User_Application {
 	public char[] DemandeCasier(){
 		connection ();
 
-		Byte[] message_reception = new byte[5]; 
+		Byte[] numero_casier = new byte[4];
 
 
-		s.Receive (message_reception);
+		s.Receive (numero_casier);
 
 
 		s.Close ();
 
-		return null;
+		return Encoding.Unicode.GetChars(numero_casier);
 	}
 
 	public string ObtenirAddrMAC(){
@@ -145,7 +145,7 @@ public class User_Application {
 			}
 		}
 
-		//s.Send (message, message.Length, 0);
+
 	}
 
-}//end User_Application
+}

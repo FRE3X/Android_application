@@ -29,7 +29,7 @@ namespace testfragement
 			button.Click += delegate {
 				FragmentTransaction transaction = FragmentManager.BeginTransaction(); 
 				Dialog dialog = new Dialog(); 
-				dialog.Show(transaction, "dialog_frame"); 
+				dialog.Show(transaction, "Dialog_Frame"); 
 			};
 		}
 	}

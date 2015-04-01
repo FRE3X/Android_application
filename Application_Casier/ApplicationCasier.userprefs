@@ -1,10 +1,11 @@
 ﻿<Properties StartupItem="ApplicationCasier/ApplicationCasier.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus_5_API_21_x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ApplicationCasier/MainActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.03b29b3b25190719" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ApplicationCasier/Resources/Dialog_Reservation.cs">
     <Files>
-      <File FileName="ApplicationCasier/MainActivity.cs" Line="31" Column="31" />
-      <File FileName="ApplicationCasier/User_Application.cs" Line="43" Column="43" />
-      <File FileName="ApplicationCasier/Resources/values/Strings.xml" Line="1" Column="1" />
+      <File FileName="ApplicationCasier/MainActivity.cs" Line="68" Column="5" />
+      <File FileName="ApplicationCasier/User_Application.cs" Line="90" Column="3" />
+      <File FileName="ApplicationCasier/Resources/values/Strings.xml" Line="5" Column="32" />
+      <File FileName="ApplicationCasier/Resources/Dialog_Reservation.cs" Line="18" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -13,7 +14,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="ApplicationCasier/User_Application.cs" line="35" offsetX="247" offsetY="544" expression="ip_server" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.testfragement MonoForAntroid.PreferredDevice="Nexus 4" />
+  <MonoDevelop.Ide.ItemProperties.testfragement MonoForAntroid.PreferredDevice="Nexus 4" AndroidDesignerPreferredDevice="Nexus 4" />
   <MonoDevelop.Ide.ItemProperties.testFragmentWithDrawerLayout MonoForAntroid.PreferredDevice="Nexus 4" />
-  <MonoDevelop.Ide.ItemProperties.ApplicationCasier MonoForAntroid.PreferredDevice="Nexus 4" />
+  <MonoDevelop.Ide.ItemProperties.ApplicationCasier MonoForAntroid.PreferredDevice="Nexus 4" AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>

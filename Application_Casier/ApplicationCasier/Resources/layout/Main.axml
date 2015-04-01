@@ -15,27 +15,34 @@
             android:layout_height="wrap_content"
             android:minHeight="?android:attr/actionBarSize"
             android:background="?android:attr/colorPrimary" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+            <ImageButton
+                android:id="@+id/imageButtonKeyFree1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/KeyFree"
+                android:background="@android:color/transparent"
+                android:layout_weight="1" />
+            <ImageButton
+                android:id="@+id/imageButtonKeyFree2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/KeyFree"
+                android:background="@android:color/transparent"
+                android:layout_weight="1" />
+            <ImageButton
+                android:id="@+id/imageButtonKeyFree3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/KeyFree"
+                android:background="@android:color/transparent"
+                android:layout_weight="1" />
+        </LinearLayout>
     </FrameLayout>
-<!--	<FrameLayout
-    android:id="@+id/nav_drawer_container"
-    android:layout_gravity="left"
-    android:layout_width="240dp"
-    android:layout_height="match_parent" >
-    	
-    	<ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/KeyFree" />
-
-
-    </FrameLayout>-->
-<!--	<ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/KeyFree" /> -->
-<!-- The left navigation drawer -->
     <ListView
         android:theme="@android:style/Theme.Material.Light"
         android:id="@+id/ListView"

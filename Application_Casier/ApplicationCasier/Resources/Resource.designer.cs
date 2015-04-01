@@ -1096,16 +1096,25 @@ namespace ApplicationCasier
 			public const int abc_textfield_search_material = 2130837554;
 			
 			// aapt resource value: 0x7f020033
-			public const int ic_action_settings = 2130837555;
+			public const int error = 2130837555;
 			
 			// aapt resource value: 0x7f020034
-			public const int ic_launcher = 2130837556;
+			public const int ic_action_settings = 2130837556;
 			
 			// aapt resource value: 0x7f020035
-			public const int Icon = 2130837557;
+			public const int ic_launcher = 2130837557;
 			
 			// aapt resource value: 0x7f020036
-			public const int KeyFree = 2130837558;
+			public const int Icon = 2130837558;
+			
+			// aapt resource value: 0x7f020037
+			public const int KeyFree = 2130837559;
+			
+			// aapt resource value: 0x7f020038
+			public const int loading = 2130837560;
+			
+			// aapt resource value: 0x7f020039
+			public const int validate = 2130837561;
 			
 			static Drawable()
 			{
@@ -1120,8 +1129,8 @@ namespace ApplicationCasier
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080042
-			public const int ListView = 2131230786;
+			// aapt resource value: 0x7f080045
+			public const int ListView = 2131230789;
 			
 			// aapt resource value: 0x7f080031
 			public const int action_bar = 2131230769;
@@ -1162,8 +1171,8 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080020
 			public const int action_mode_close_button = 2131230752;
 			
-			// aapt resource value: 0x7f080045
-			public const int action_settings = 2131230789;
+			// aapt resource value: 0x7f080048
+			public const int action_settings = 2131230792;
 			
 			// aapt resource value: 0x7f080021
 			public const int activity_chooser_view_content = 2131230753;
@@ -1180,8 +1189,8 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080017
 			public const int collapseActionView = 2131230743;
 			
-			// aapt resource value: 0x7f080040
-			public const int content_frame = 2131230784;
+			// aapt resource value: 0x7f080042
+			public const int content_frame = 2131230786;
 			
 			// aapt resource value: 0x7f08002f
 			public const int decor_content_parent = 2131230767;
@@ -1225,8 +1234,17 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080023
 			public const int image = 2131230755;
 			
-			// aapt resource value: 0x7f080043
-			public const int ivIcon = 2131230787;
+			// aapt resource value: 0x7f08003f
+			public const int imageButtonKeyFree1 = 2131230783;
+			
+			// aapt resource value: 0x7f080040
+			public const int imageButtonKeyFree2 = 2131230784;
+			
+			// aapt resource value: 0x7f080044
+			public const int imageButtonKeyFree3 = 2131230788;
+			
+			// aapt resource value: 0x7f080046
+			public const int ivIcon = 2131230790;
 			
 			// aapt resource value: 0x7f080009
 			public const int listMode = 2131230729;
@@ -1237,8 +1255,8 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080015
 			public const int middle = 2131230741;
 			
-			// aapt resource value: 0x7f08003f
-			public const int myDrawer = 2131230783;
+			// aapt resource value: 0x7f080041
+			public const int myDrawer = 2131230785;
 			
 			// aapt resource value: 0x7f080019
 			public const int never = 2131230745;
@@ -1312,11 +1330,11 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080027
 			public const int title = 2131230759;
 			
-			// aapt resource value: 0x7f080041
-			public const int toolbar = 2131230785;
+			// aapt resource value: 0x7f080043
+			public const int toolbar = 2131230787;
 			
-			// aapt resource value: 0x7f080044
-			public const int tvTitle = 2131230788;
+			// aapt resource value: 0x7f080047
+			public const int tvTitle = 2131230791;
 			
 			// aapt resource value: 0x7f080008
 			public const int up = 2131230728;
@@ -1429,13 +1447,16 @@ namespace ApplicationCasier
 			public const int abc_simple_dropdown_hint = 2130903062;
 			
 			// aapt resource value: 0x7f030017
-			public const int Main = 2130903063;
+			public const int Dialog_Frame = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int SingleRow = 2130903064;
+			public const int Main = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int support_simple_spinner_dropdown_item = 2130903065;
+			public const int SingleRow = 2130903065;
+			
+			// aapt resource value: 0x7f03001a
+			public const int support_simple_spinner_dropdown_item = 2130903066;
 			
 			static Layout()
 			{

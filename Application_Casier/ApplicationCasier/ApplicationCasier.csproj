@@ -54,6 +54,7 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User_Application.cs" />
+    <Compile Include="Resources\Dialog_Reservation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -73,8 +74,16 @@
     <AndroidResource Include="Resources\values\style.xml" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\Menu\menu.xml" />
-    <AndroidResource Include="Resources\drawable-mdpi\KeyFree.png" />
     <AndroidResource Include="Resources\layout\SingleRow.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\KeyFree.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\KeyFree.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\KeyFree.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\KeyFree.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\KeyFree.png" />
+    <AndroidResource Include="Resources\layout\Dialog_Frame.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\error.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\validate.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\loading.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

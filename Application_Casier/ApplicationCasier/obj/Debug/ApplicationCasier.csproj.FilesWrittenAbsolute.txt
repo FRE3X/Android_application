@@ -49,3 +49,12 @@
 /Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/R.cs.flag
 /Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/bin/Debug/ApplicationCasier.ApplicationCasier-Signed.apk
 /Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/uploadflags.txt
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/drawable-xhdpi/keyfreexhdpi.png
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/drawable-hdpi/keyfree.png
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/drawable-xhdpi/keyfree.png
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/drawable-xxhdpi/keyfree.png
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/drawable-xxxhdpi/keyfree.png
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/layout/dialog_frame.xml
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/drawable-mdpi/error.png
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/drawable-mdpi/validate.png
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/drawable-mdpi/loading.gif

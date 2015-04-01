@@ -19,7 +19,8 @@ namespace ApplicationCasier
 		List<string> listItem = new List<string>();
 		ArrayAdapter mAdapter; 
 		ListView mDrawer;
-		User_Application Ap; 
+		User_Application Ap;
+		RelativeLayout loading; 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -32,6 +33,7 @@ namespace ApplicationCasier
 			mDrawerLayout = FindViewById<DrawerLayout> (Resource.Id.myDrawer); 
 			mDrawer = FindViewById<ListView> (Resource.Id.ListView); 
 			var toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
+			//loading = FindViewById<RelativeLayout> (Resource.Id.loading_layout); 
 			SetActionBar (toolbar);
 
 			toolbar.SetNavigationIcon (Resource.Drawable.ic_launcher); 
@@ -45,6 +47,7 @@ namespace ApplicationCasier
 			mDrawer.Adapter = mAdapter; 
 
 			mDrawer.ItemClick += listView_ItemClick;
+			//loading.Visibility = ViewStates.Invisible; 
 
 		}
 
@@ -62,18 +65,16 @@ namespace ApplicationCasier
 
 			switch (item.ToString()) { 
 			case "Actualiser":
-
 				//handler est associé a MainActivity :
 				Handler handler = new Handler (); 
 
 				//Creation du thread :
 				new Thread (delegate(){
 
-					SocketException return_Exception = new SocketException (); 
-					 	
+						 	
 					try {
 						//Appelle de la méthode actualiser : 
-						Ap.DemandeCasier ();
+						Ap.Actualiser ();
 
 					
 					} catch (SocketException j) {//Capture de SocketException
@@ -82,45 +83,34 @@ namespace ApplicationCasier
 						handler.Post(()=> {
 							Toast toast = Toast.MakeText (this, j.Message, ToastLength.Short);
 							toast.SetGravity (GravityFlags.Center, 0, 0);
-							toast.Show ();
+							toast.Show();
 
 						});
 					}				
 				}).Start();
 
-			
-
-					
+								
 				break;
 			case "Mot de passe": 
-				Toast.MakeText (this, "coucou", ToastLength.Short).Show ();
+				
 				break; 
+			case "Réservation": 
+
+				new Thread (delegate () {
+					char[] numero_casier = Ap.DemandeCasier (); 
+
+					FragmentTransaction transaction = FragmentManager.BeginTransaction (); 
+					Dialog_Reservation dialog = new Dialog_Reservation (); 
+					dialog.Show (transaction, "dialog_Reservation"); 
+
+					 	
+				
+				}).Start (); 
+
+				break;
 			}
 
-			//Make a toast with the item name just to show it was clicked
-			//Toast.MakeText(this, item.ToString() + " Clicked!", ToastLength.Short).Show();
 		}
-
-//		private Java.Lang.Runnable mUpdateGeneration = new Java.Lang.Runnable((SocketException k) =>
-//			{
-//				ToastException(k);
-//			});
-//
-//
-//		public void ToastException(SocketException Se){
-//			Toast toast = Toast.MakeText (this, Se.Message, ToastLength.Short);
-//			toast.SetGravity (GravityFlags.Center, 0, 0);
-//			toast.Show ();
-//		}
-//		public void error_message(SocketException Se){
-//			Toast toast = Toast.MakeText (this, Se.Message, ToastLength.Short);
-//			toast.SetGravity (GravityFlags.Center, 0, 0);
-//			toast.Show ();
-//		
-//		
-//		}
-
-
 
 
 	}

@@ -33,7 +33,7 @@ namespace ApplicationCasier
 			mDrawerLayout = FindViewById<DrawerLayout> (Resource.Id.myDrawer); 
 			mDrawer = FindViewById<ListView> (Resource.Id.ListView); 
 			var toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
-			//loading = FindViewById<RelativeLayout> (Resource.Id.loading_layout); 
+			loading = FindViewById<RelativeLayout> (Resource.Id.loading_layout); 
 			SetActionBar (toolbar);
 
 			toolbar.SetNavigationIcon (Resource.Drawable.ic_launcher); 
@@ -47,7 +47,7 @@ namespace ApplicationCasier
 			mDrawer.Adapter = mAdapter; 
 
 			mDrawer.ItemClick += listView_ItemClick;
-			//loading.Visibility = ViewStates.Invisible; 
+			loading.Visibility = ViewStates.Gone; 
 
 		}
 
@@ -64,21 +64,18 @@ namespace ApplicationCasier
 			var item = this.mDrawer.GetItemAtPosition(e.Position);
 
 			switch (item.ToString()) { 
+
 			case "Actualiser":
+				//ferme le mdDrawerLayout : 
+				mDrawerLayout.CloseDrawer (mDrawer); 
 				//handler est associé a MainActivity :
 				Handler handler = new Handler (); 
-
 				//Creation du thread :
 				new Thread (delegate(){
-
-						 	
 					try {
 						//Appelle de la méthode actualiser : 
 						Ap.Actualiser ();
-
-					
 					} catch (SocketException j) {//Capture de SocketException
-					
 					// Quand le handler est appellé il géle MainActiviy le temps d'afficher le toast : 
 						handler.Post(()=> {
 							Toast toast = Toast.MakeText (this, j.Message, ToastLength.Short);
@@ -88,13 +85,17 @@ namespace ApplicationCasier
 						});
 					}				
 				}).Start();
-
-								
 				break;
+
 			case "Mot de passe": 
-				
+				//ferme le mdDrawerLayout : 
+				mDrawerLayout.CloseDrawer (mDrawer); 	
+
 				break; 
+			
 			case "Réservation": 
+				//ferme le mdDrawerLayout : 
+				mDrawerLayout.CloseDrawer (mDrawer); 
 
 				new Thread (delegate () {
 					char[] numero_casier = Ap.DemandeCasier (); 

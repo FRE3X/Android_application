@@ -59,17 +59,29 @@ public class User_Application {
 	}
 
 	public char[] DemandeCasier(){
+		//buffer de numero de casier et mdp :
+		//les 2 premiers chiffre sont le numero du casier 
+		Byte[] buffer_reception  = new byte[6];
+		Byte[] demande_reservation = new byte[1];
+
+
+		//Place la valeur "d" pour demander la Reservation
+		demande_reservation = Encoding.ASCII.GetBytes("d"); 
+
 		connection ();
 
-		Byte[] numero_casier = new byte[4];
+		//demande de reservation : 
+		s.Send (demande_reservation,demande_reservation.Length,0);
 
-
-		s.Receive (numero_casier);
-
-
+		//reception numero et casier : 
+		s.Receive (buffer_reception);
+	
+		//fermeture socket : 
 		s.Close ();
 
-		return Encoding.Unicode.GetChars(numero_casier);
+		//convertie string en char[]
+		char[] envoi = System.Text.Encoding.ASCII.GetString(buffer_reception).ToCharArray(); 
+		return envoi;
 	}
 
 	public string ObtenirAddrMAC(){
@@ -116,7 +128,7 @@ public class User_Application {
 	public void connection(){
 		s = null;
 		IPHostEntry hostEntry = null;
-		//Byte[] message = Encoding.ASCII.GetBytes("coucou");  
+		 
 
 		// Get host related information.
 		hostEntry = Dns.GetHostEntry(ip_server);

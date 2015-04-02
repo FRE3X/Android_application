@@ -1129,8 +1129,8 @@ namespace ApplicationCasier
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080045
-			public const int ListView = 2131230789;
+			// aapt resource value: 0x7f080047
+			public const int ListView = 2131230791;
 			
 			// aapt resource value: 0x7f080031
 			public const int action_bar = 2131230769;
@@ -1171,8 +1171,8 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080020
 			public const int action_mode_close_button = 2131230752;
 			
-			// aapt resource value: 0x7f080048
-			public const int action_settings = 2131230792;
+			// aapt resource value: 0x7f08004a
+			public const int action_settings = 2131230794;
 			
 			// aapt resource value: 0x7f080021
 			public const int activity_chooser_view_content = 2131230753;
@@ -1240,17 +1240,23 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080040
 			public const int imageButtonKeyFree2 = 2131230784;
 			
-			// aapt resource value: 0x7f080044
-			public const int imageButtonKeyFree3 = 2131230788;
-			
 			// aapt resource value: 0x7f080046
-			public const int ivIcon = 2131230790;
+			public const int imageButtonKeyFree3 = 2131230790;
+			
+			// aapt resource value: 0x7f080048
+			public const int ivIcon = 2131230792;
 			
 			// aapt resource value: 0x7f080009
 			public const int listMode = 2131230729;
 			
 			// aapt resource value: 0x7f080025
 			public const int list_item = 2131230757;
+			
+			// aapt resource value: 0x7f080045
+			public const int loading_img = 2131230789;
+			
+			// aapt resource value: 0x7f080044
+			public const int loading_layout = 2131230788;
 			
 			// aapt resource value: 0x7f080015
 			public const int middle = 2131230741;
@@ -1333,8 +1339,8 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080043
 			public const int toolbar = 2131230787;
 			
-			// aapt resource value: 0x7f080047
-			public const int tvTitle = 2131230791;
+			// aapt resource value: 0x7f080049
+			public const int tvTitle = 2131230793;
 			
 			// aapt resource value: 0x7f080008
 			public const int up = 2131230728;

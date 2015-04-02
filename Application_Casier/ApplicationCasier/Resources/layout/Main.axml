@@ -15,6 +15,18 @@
             android:layout_height="wrap_content"
             android:minHeight="?android:attr/actionBarSize"
             android:background="?android:attr/colorPrimary" />
+        <RelativeLayout
+            android:id="@+id/loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/loading_img"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:src="@drawable/loading"
+                android:indeterminate="true" />
+        </RelativeLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"

@@ -100,6 +100,7 @@ namespace ApplicationCasier
 				new Thread (delegate () {
 					char[] numero_casier = Ap.DemandeCasier (); 
 
+					//Affichage du dialog frame : 
 					FragmentTransaction transaction = FragmentManager.BeginTransaction (); 
 					Dialog_Reservation dialog = new Dialog_Reservation (); 
 					dialog.Show (transaction, "dialog_Reservation"); 

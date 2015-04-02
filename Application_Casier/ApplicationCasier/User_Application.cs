@@ -60,8 +60,7 @@ public class User_Application {
 
 	public char[] DemandeCasier(){
 		//buffer de numero de casier et mdp :
-		//les 2 premiers chiffre sont le numero du casier 
-		Byte[] buffer_reception  = new byte[6];
+		Byte[] numero_casier  = new byte[2];
 		Byte[] demande_reservation = new byte[1];
 
 
@@ -73,14 +72,14 @@ public class User_Application {
 		//demande de reservation : 
 		s.Send (demande_reservation,demande_reservation.Length,0);
 
-		//reception numero et casier : 
-		s.Receive (buffer_reception);
+		//reception numero : 
+		s.Receive (numero_casier);
 	
 		//fermeture socket : 
 		s.Close ();
 
 		//convertie string en char[]
-		char[] envoi = System.Text.Encoding.ASCII.GetString(buffer_reception).ToCharArray(); 
+		char[] envoi = System.Text.Encoding.ASCII.GetString(numero_casier).ToCharArray(); 
 		return envoi;
 	}
 

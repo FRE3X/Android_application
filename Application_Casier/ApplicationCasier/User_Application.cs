@@ -45,8 +45,6 @@ public class User_Application {
 	}
 
 	public int Actualiser(){
-		EnvoiAddrMAC (); 
-
 //		Byte[] message = new byte[5];   
 //
 //		s.Receive (message, SocketFlags.None);
@@ -91,45 +89,12 @@ public class User_Application {
 		return envoi;
 	
 	}
-	public string ObtenirAddrMAC(){
-			NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
-			String sMacAddress = string.Empty;
-			
-			foreach (NetworkInterface adapter in nics)
-			{
-			if  (sMacAddress == String.Empty)// r¨¦cup¨¦rer l'adresse mac de la permi¨re carte   
-				{
-				sMacAddress = adapter.GetPhysicalAddress().ToString();
-				}
-			}
 
-		return sMacAddress; 
-			
-		 
-	}
 
 
 	public char[] ValidationCasier(){
 
 		return null;
-	}
-
-	public void EnvoiAddrMAC(){
-		System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding(); 
-
-		//Recuperation de l'adresse mac : 
-		string mac = ObtenirAddrMAC (); 
-
-		//Convertion addresse Mac 
-		Byte[] message = Encoding.ASCII.GetBytes (mac); 
-
-		connection (); 
-
-		//envoie du message
-		s.Send (message, message.Length, 0); 
-
-		//fermeture du soket 
-		s.Close(); 
 	}
 
 	public void connection(){

@@ -58,6 +58,7 @@ namespace ApplicationCasier
 			return base.OnCreateOptionsMenu (menu);
 		}
 
+		// Si un objet est cliquer dans le drawer layout
 		void listView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
 		{
 			//récupération de l'objet séléctionner dans la listView 
@@ -98,14 +99,17 @@ namespace ApplicationCasier
 				mDrawerLayout.CloseDrawer (mDrawer); 
 
 				new Thread (delegate () {
-					char[] numero_casier = Ap.DemandeCasier (); 
 
+					char[] numero_casier = Ap.DemandeCasier (); 
+					string numero = new string(numero_casier);
 					//Affichage du dialog frame : 
 					FragmentTransaction transaction = FragmentManager.BeginTransaction (); 
-					Dialog_Reservation dialog = new Dialog_Reservation (); 
+					Dialog_Reservation dialog = new Dialog_Reservation ();
+					//transmission  du numero de casier : 
+					dialog.modifier_num_casier(numero); 
+					//Affichage de la fenêtre de dialog : 
 					dialog.Show (transaction, "dialog_Reservation"); 
-
-					 	
+				 	
 				
 				}).Start (); 
 

@@ -8,21 +8,26 @@
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/textview_numero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <ImageButton
             android:id="@+id/imageButtonKeyFree1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/validate"
-            android:background="@android:color/transparent"
-            android:layout_alignParentBottom="true"
-            android:layout_weight="10" />
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:gravity="bottom"
+            android:src="@drawable/validate" />
         <ImageButton
             android:id="@+id/imageButtonKeyFree2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:gravity="bottom"
             android:src="@drawable/error"
-            android:background="@android:color/transparent"
-            android:layout_gravity="bottom"
-            android:layout_weight="20" />
+            android:background="@android:color/transparent" />
     </LinearLayout>
 </RelativeLayout>

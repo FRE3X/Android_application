@@ -75,21 +75,29 @@ public class User_Application {
 		//reception numero : 
 		s.Receive (numero_casier);
 	
-		//fermeture socket : 
-		s.Close ();
-
-		//convertie string en char[]
+		//convertie byte en char[]
 		char[] envoi = System.Text.Encoding.ASCII.GetString(numero_casier).ToCharArray(); 
 		return envoi;
 	}
+	public char[] recuperation_mdp(){
+		//buffer de mots de passe
+		Byte[] mots_de_passe  = new byte[4];
 
+		//Reception de mots de passe
+		s.Receive (mots_de_passe, mots_de_passe.Length, 0); 
+
+		//convertie byte en char[]
+		char[] envoi = System.Text.Encoding.ASCII.GetString(mots_de_passe).ToCharArray(); 
+		return envoi;
+	
+	}
 	public string ObtenirAddrMAC(){
 			NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
 			String sMacAddress = string.Empty;
 			
 			foreach (NetworkInterface adapter in nics)
 			{
-			if  (sMacAddress == String.Empty)// r¨¦cup¨¦rer l'adresse mac de la permi¨¨re carte   
+			if  (sMacAddress == String.Empty)// r¨¦cup¨¦rer l'adresse mac de la permi¨re carte   
 				{
 				sMacAddress = adapter.GetPhysicalAddress().ToString();
 				}

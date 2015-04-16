@@ -9,12 +9,6 @@
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="?android:attr/actionBarSize"
-            android:background="?android:attr/colorPrimary" />
         <RelativeLayout
             android:id="@+id/loading_layout"
             android:layout_width="match_parent"
@@ -62,7 +56,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="left"
         android:choiceMode="singleChoice"
-        android:divider="#D2D2D2"
+        android:divider="#FFFFFF"
         android:dividerHeight="2dp"
-        android:background="#FBEFEF" />
+        android:background="#1C1C1C" />
 </android.support.v4.widget.DrawerLayout>

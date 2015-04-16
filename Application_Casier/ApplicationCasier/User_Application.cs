@@ -10,57 +10,31 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Text;
- 
-
-
-
 
 public class User_Application {
-
-
-	/// Contient l'adresse MAC du t¨¦l¨¦phone
-	//private string AddrMAC;
-
-	/// Contient le mot de passe du casier
-	private short  MdpCasier;
-
-	/// Contient le num¨¦ro du casier
-	private short NumCasier;
-
 	string ip_server;
 	int Port; 
-	Socket s; 
+	Socket Sock; 
 
-	public User_Application(string ip,int port){
-		ip_server = ip; 
-		Port = port; 
+	public User_Application(){
+		ip_server = "192.168.1.99";
+		Port = 4790; 
+
 	}
 
 	~User_Application(){
 
 	}
 
-	public virtual void Dispose(){
-
-	}
-
 	public int Actualiser(){
-//		Byte[] message = new byte[5];   
-//
-//		s.Receive (message, SocketFlags.None);
-//
-//		s.Close (); 
-//
-//		int m = Convert.ToInt16(message); 
-//
+
 		return 0;
 	}
 
 	public char[] DemandeCasier(){
-		//buffer de numero de casier et mdp :
+		//buffer de numero de casier :
 		Byte[] numero_casier  = new byte[2];
 		Byte[] demande_reservation = new byte[1];
-
 
 		//Place la valeur "d" pour demander la Reservation
 		demande_reservation = Encoding.ASCII.GetBytes("d"); 
@@ -68,21 +42,22 @@ public class User_Application {
 		connection ();
 
 		//demande de reservation : 
-		s.Send (demande_reservation,demande_reservation.Length,0);
+		Sock.Send (demande_reservation,demande_reservation.Length,0);
 
 		//reception numero : 
-		s.Receive (numero_casier);
+		Sock.Receive (numero_casier);
 	
 		//convertie byte en char[]
 		char[] envoi = System.Text.Encoding.ASCII.GetString(numero_casier).ToCharArray(); 
 		return envoi;
 	}
+
 	public char[] recuperation_mdp(){
 		//buffer de mots de passe
 		Byte[] mots_de_passe  = new byte[4];
 
 		//Reception de mots de passe
-		s.Receive (mots_de_passe, mots_de_passe.Length, 0); 
+		Sock.Receive (mots_de_passe, mots_de_passe.Length, 0); 
 
 		//convertie byte en char[]
 		char[] envoi = System.Text.Encoding.ASCII.GetString(mots_de_passe).ToCharArray(); 
@@ -98,16 +73,16 @@ public class User_Application {
 	}
 
 	public void connection(){
-		s = null;
+		Sock = null;
 		IPHostEntry hostEntry = null;
 		 
 
-		// Get host related information.
+		// recup¨¦re les information de l'h?te
 		hostEntry = Dns.GetHostEntry(ip_server);
 
-		// Loop through the AddressList to obtain the supported AddressFamily. This is to avoid
-		// an exception that occurs when the host IP Address is not compatible with the address family
-		// (typical in the IPv6 case).
+		// Boucle ¨¤ travers le AddressList pour obtenir le AddressFamily, pour ¨¦viter
+		// Une exception qui se produit lorsque l'adresse IP de l'h?te ne est pas compatible avec la famille d'adresse
+		// (Typique dans le cas IPv6).
 		foreach(IPAddress address in hostEntry.AddressList)
 		{
 			IPEndPoint ipe = new IPEndPoint(address,Port);
@@ -120,7 +95,7 @@ public class User_Application {
 
 			if(tempSocket.Connected)
 			{
-				s = tempSocket;
+				Sock = tempSocket;
 				break;
 			}
 			else

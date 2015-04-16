@@ -19,25 +19,25 @@ namespace ApplicationCasier
 		List<string> listItem = new List<string>();
 		ArrayAdapter mAdapter; 
 		ListView mDrawer;
-		User_Application Ap;
+		User_Application client;
 		RelativeLayout loading; 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
 			SetContentView (Resource.Layout.Main);
 
 			//mise en place de l'ip et du port : 
-			Ap = new User_Application(GetString(Resource.String.ip),int.Parse(GetString(Resource.String.port))); 
+			//client = new User_Application(GetString(Resource.String.ip),int.Parse(GetString(Resource.String.port))); 
+			client = new User_Application(); 
 
 			mDrawerLayout = FindViewById<DrawerLayout> (Resource.Id.myDrawer); 
 			mDrawer = FindViewById<ListView> (Resource.Id.ListView); 
-			var toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
+			//var toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
 			loading = FindViewById<RelativeLayout> (Resource.Id.loading_layout); 
-			SetActionBar (toolbar);
 
-			toolbar.SetNavigationIcon (Resource.Drawable.ic_launcher); 
-			toolbar.InflateMenu (Resource.Menu.menu); 
+
+			//toolbar.SetNavigationIcon (Resource.Drawable.ic_launcher); 
+			//toolbar.InflateMenu (Resource.Menu.menu); 
 			//on donne le nom des item : 
 			listItem.Add ("Actualiser");
 			listItem.Add ("Mot de passe"); 
@@ -47,7 +47,9 @@ namespace ApplicationCasier
 			mDrawer.Adapter = mAdapter; 
 
 			mDrawer.ItemClick += listView_ItemClick;
-			loading.Visibility = ViewStates.Gone; 
+			loading.Visibility = ViewStates.Gone;
+
+
 
 		}
 
@@ -58,24 +60,42 @@ namespace ApplicationCasier
 			return base.OnCreateOptionsMenu (menu);
 		}
 
+		// recuperation du click dans le menu 
+		public override bool OnOptionsItemSelected (IMenuItem item)
+		{
+			base.OnOptionsItemSelected (item); 
+
+			switch (item.ItemId)
+			{
+			case Resource.Id.action_settings: 
+
+				FragmentTransaction transaction = FragmentManager.BeginTransaction (); 
+				Dialog_Option dialog = new Dialog_Option (); 
+				dialog.Show (transaction, "Dialog_Option"); 
+
+				break; 
+
+			}
+
+			return true; 		
+		}
+
 		// Si un objet est cliquer dans le drawer layout
 		void listView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
 		{
-			//récupération de l'objet séléctionner dans la listView 
-			var item = this.mDrawer.GetItemAtPosition(e.Position);
-
+			var item = this.mDrawer.GetItemAtPosition(e.Position);//récupération de l'objet séléctionner dans la listView 
 			switch (item.ToString()) { 
-
 			case "Actualiser":
 				//ferme le mdDrawerLayout : 
 				mDrawerLayout.CloseDrawer (mDrawer); 
 				//handler est associé a MainActivity :
 				Handler handler = new Handler (); 
+
 				//Creation du thread :
 				new Thread (delegate(){
 					try {
 						//Appelle de la méthode actualiser : 
-						Ap.Actualiser ();
+						client.connection(); 
 					} catch (SocketException j) {//Capture de SocketException
 					// Quand le handler est appellé il géle MainActiviy le temps d'afficher le toast : 
 						handler.Post(()=> {
@@ -89,29 +109,39 @@ namespace ApplicationCasier
 				break;
 
 			case "Mot de passe": 
-				//ferme le mdDrawerLayout : 
-				mDrawerLayout.CloseDrawer (mDrawer); 	
-
+				mDrawerLayout.CloseDrawer (mDrawer);//ferme le mdDrawerLayout : 	
 				break; 
 			
 			case "Réservation": 
-				//ferme le mdDrawerLayout : 
-				mDrawerLayout.CloseDrawer (mDrawer); 
+				mDrawerLayout.CloseDrawer (mDrawer);//ferme le mdDrawerLayout : 
+					
+				Handler handler_reservation = new Handler ();
+				Thread thread_reservation = new Thread (delegate () {
 
-				new Thread (delegate () {
+					try {
+						char[] numero_casier = client.DemandeCasier ();
+						string numero = new string (numero_casier);
+						// pour debug : 
+						//string numero = "12"; 
+						//Affichage du dialog frame : 
+						FragmentTransaction transaction = FragmentManager.BeginTransaction (); 
+						Dialog_Reservation dialog = new Dialog_Reservation ();
+						//transmission  du numero de casier : 
+						dialog.modifier_num_casier (numero); 
+						//Affichage de la fenêtre de dialog : 
+						dialog.Show (transaction, "dialog_Reservation"); 
+					
+					} catch (SocketException i) {//Capture de SocketException
+						// Quand le handler est appellé il géle MainActiviy le temps d'afficher le toast : 
+						handler_reservation.Post (() => {
+							Toast toast = Toast.MakeText (this, i.Message, ToastLength.Short);
+							toast.SetGravity (GravityFlags.Center, 0, 0);
+							toast.Show ();
 
-					char[] numero_casier = Ap.DemandeCasier (); 
-					string numero = new string(numero_casier);
-					//Affichage du dialog frame : 
-					FragmentTransaction transaction = FragmentManager.BeginTransaction (); 
-					Dialog_Reservation dialog = new Dialog_Reservation ();
-					//transmission  du numero de casier : 
-					dialog.modifier_num_casier(numero); 
-					//Affichage de la fenêtre de dialog : 
-					dialog.Show (transaction, "dialog_Reservation"); 
-				 	
-				
-				}).Start (); 
+						});
+					}
+				});
+				thread_reservation.Start (); 
 
 				break;
 			}

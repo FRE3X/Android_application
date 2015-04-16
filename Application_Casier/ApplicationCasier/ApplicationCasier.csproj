@@ -55,6 +55,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User_Application.cs" />
     <Compile Include="Resources\Dialog_Reservation.cs" />
+    <Compile Include="Resources\Dialog_Option.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -84,6 +85,7 @@
     <AndroidResource Include="Resources\drawable-mdpi\error.png" />
     <AndroidResource Include="Resources\drawable-mdpi\validate.png" />
     <AndroidResource Include="Resources\drawable-mdpi\loading.gif" />
+    <AndroidResource Include="Resources\layout\Dialog_Option.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

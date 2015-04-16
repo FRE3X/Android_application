@@ -58,3 +58,4 @@
 /Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/drawable-mdpi/error.png
 /Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/drawable-mdpi/validate.png
 /Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/drawable-mdpi/loading.gif
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/layout/dialog_option.xml

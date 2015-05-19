@@ -53,7 +53,7 @@ public class User_Application {
 	}
 
 	public char[] recuperation_mdp(){
-		//buffer de mots de passe
+		//buffer de mots de passe : 
 		Byte[] mots_de_passe  = new byte[4];
 
 		//demande de mot de passe : 

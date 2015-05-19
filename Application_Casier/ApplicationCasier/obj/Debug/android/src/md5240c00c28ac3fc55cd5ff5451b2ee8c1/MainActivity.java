@@ -10,6 +10,7 @@ public class MainActivity
 	static {
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
+			"n_onPostCreate:(Landroid/os/Bundle;)V:GetOnPostCreate_Landroid_os_Bundle_Handler\n" +
 			"n_onCreateOptionsMenu:(Landroid/view/Menu;)Z:GetOnCreateOptionsMenu_Landroid_view_Menu_Handler\n" +
 			"n_onOptionsItemSelected:(Landroid/view/MenuItem;)Z:GetOnOptionsItemSelected_Landroid_view_MenuItem_Handler\n" +
 			"";
@@ -31,6 +32,14 @@ public class MainActivity
 	}
 
 	private native void n_onCreate (android.os.Bundle p0);
+
+
+	public void onPostCreate (android.os.Bundle p0)
+	{
+		n_onPostCreate (p0);
+	}
+
+	private native void n_onPostCreate (android.os.Bundle p0);
 
 
 	public boolean onCreateOptionsMenu (android.view.Menu p0)

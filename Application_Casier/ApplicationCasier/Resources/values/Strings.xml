@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="ip">192.168.1.99</string>
-	<string name="port">4790</string> 
+	<string name="port">4790</string>
+	<string name="open_drawer">ouverture drawer</string>
+	<string name="close_drawer">fermeture drawer</string>  
 </resources>

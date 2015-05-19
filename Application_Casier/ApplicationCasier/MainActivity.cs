@@ -10,6 +10,9 @@ using System.Collections.Generic;
 using Android.Support.V4.Widget;
 using System.Net.Sockets;
 
+using Android.Support.V4.App;
+ 
+
 namespace ApplicationCasier
 {
 	[Activity (Label = "Safe Locker", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/AppBaseTheme")]
@@ -21,7 +24,7 @@ namespace ApplicationCasier
 		ListView mDrawer;
 		User_Application client;
 		RelativeLayout loading; 
-
+		ActionBarDrawerToggle DrawerToggle; 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -39,14 +42,30 @@ namespace ApplicationCasier
 			listItem.Add ("Mot de passe"); 
 			listItem.Add ("Réservation");
 
+			DrawerToggle = new ActionBarDrawerToggle (this, mDrawerLayout, Resource.Drawable.menu, Resource.String.open_drawer, Resource.String.close_drawer); 
 			mAdapter = new ArrayAdapter (this,Resource.Layout.SingleRow,Resource.Id.tvTitle, listItem); 
+
+			mDrawerLayout.SetDrawerListener (DrawerToggle); 
+
+			//mise en place de l'adaptateur pour la ListView : 
 			mDrawer.Adapter = mAdapter; 
 
+			//recupération du click dans le mdrawer : 
 			mDrawer.ItemClick += listView_ItemClick;
 			loading.Visibility = ViewStates.Gone;
 
+			//Modification du menu de ActionBar : 
+			ActionBar.SetDisplayHomeAsUpEnabled (true); 
+			ActionBar.SetHomeButtonEnabled (true); 
 
 
+		}
+
+		//mise en place du boutton pour l'activation du DrawerLayout : 
+		protected override void OnPostCreate (Bundle savedInstance){
+			base.OnPostCreate (savedInstance); 
+			DrawerToggle.SyncState (); 
+		
 		}
 
 		//Creation de bouton dans la toolbar 
@@ -56,10 +75,14 @@ namespace ApplicationCasier
 			return base.OnCreateOptionsMenu (menu);
 		}
 
-		// recuperation du click dans le menu 
+		// recuperation du click dans la barre du  menu 
 		public override bool OnOptionsItemSelected (IMenuItem item)
 		{
 			base.OnOptionsItemSelected (item); 
+
+			if(DrawerToggle.OnOptionsItemSelected(item)){
+				return true; 
+			}
 
 			switch (item.ItemId)
 			{
@@ -117,7 +140,7 @@ namespace ApplicationCasier
 						// pour debug : 
 						//string numero = "12"; 
 						//Affichage du dialog frame : 
-						FragmentTransaction transaction = FragmentManager.BeginTransaction (); 
+						Android.App.FragmentTransaction transaction = FragmentManager.BeginTransaction (); 
 						Dialog_Reservation dialog = new Dialog_Reservation ();
 						//transmission  du numero de casier : 
 						dialog.modifier_num_casier (numero); 

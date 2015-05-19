@@ -1114,7 +1114,10 @@ namespace ApplicationCasier
 			public const int loading = 2130837560;
 			
 			// aapt resource value: 0x7f020039
-			public const int validate = 2130837561;
+			public const int menu = 2130837561;
+			
+			// aapt resource value: 0x7f02003a
+			public const int validate = 2130837562;
 			
 			static Drawable()
 			{
@@ -1511,56 +1514,62 @@ namespace ApplicationCasier
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f050002
-			public const int abc_action_bar_home_description = 2131034114;
-			
-			// aapt resource value: 0x7f050003
-			public const int abc_action_bar_home_description_format = 2131034115;
-			
 			// aapt resource value: 0x7f050004
-			public const int abc_action_bar_home_subtitle_description_format = 2131034116;
+			public const int abc_action_bar_home_description = 2131034116;
 			
 			// aapt resource value: 0x7f050005
-			public const int abc_action_bar_up_description = 2131034117;
+			public const int abc_action_bar_home_description_format = 2131034117;
 			
 			// aapt resource value: 0x7f050006
-			public const int abc_action_menu_overflow_description = 2131034118;
+			public const int abc_action_bar_home_subtitle_description_format = 2131034118;
 			
 			// aapt resource value: 0x7f050007
-			public const int abc_action_mode_done = 2131034119;
+			public const int abc_action_bar_up_description = 2131034119;
 			
 			// aapt resource value: 0x7f050008
-			public const int abc_activity_chooser_view_see_all = 2131034120;
+			public const int abc_action_menu_overflow_description = 2131034120;
 			
 			// aapt resource value: 0x7f050009
-			public const int abc_activitychooserview_choose_application = 2131034121;
+			public const int abc_action_mode_done = 2131034121;
 			
 			// aapt resource value: 0x7f05000a
-			public const int abc_searchview_description_clear = 2131034122;
+			public const int abc_activity_chooser_view_see_all = 2131034122;
 			
 			// aapt resource value: 0x7f05000b
-			public const int abc_searchview_description_query = 2131034123;
+			public const int abc_activitychooserview_choose_application = 2131034123;
 			
 			// aapt resource value: 0x7f05000c
-			public const int abc_searchview_description_search = 2131034124;
+			public const int abc_searchview_description_clear = 2131034124;
 			
 			// aapt resource value: 0x7f05000d
-			public const int abc_searchview_description_submit = 2131034125;
+			public const int abc_searchview_description_query = 2131034125;
 			
 			// aapt resource value: 0x7f05000e
-			public const int abc_searchview_description_voice = 2131034126;
+			public const int abc_searchview_description_search = 2131034126;
 			
 			// aapt resource value: 0x7f05000f
-			public const int abc_shareactionprovider_share_with = 2131034127;
+			public const int abc_searchview_description_submit = 2131034127;
 			
 			// aapt resource value: 0x7f050010
-			public const int abc_shareactionprovider_share_with_application = 2131034128;
+			public const int abc_searchview_description_voice = 2131034128;
 			
 			// aapt resource value: 0x7f050011
-			public const int abc_toolbar_collapse_description = 2131034129;
+			public const int abc_shareactionprovider_share_with = 2131034129;
+			
+			// aapt resource value: 0x7f050012
+			public const int abc_shareactionprovider_share_with_application = 2131034130;
+			
+			// aapt resource value: 0x7f050013
+			public const int abc_toolbar_collapse_description = 2131034131;
+			
+			// aapt resource value: 0x7f050003
+			public const int close_drawer = 2131034115;
 			
 			// aapt resource value: 0x7f050000
 			public const int ip = 2131034112;
+			
+			// aapt resource value: 0x7f050002
+			public const int open_drawer = 2131034114;
 			
 			// aapt resource value: 0x7f050001
 			public const int port = 2131034113;

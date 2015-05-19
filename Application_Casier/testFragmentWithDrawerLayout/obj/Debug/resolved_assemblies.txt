@@ -1,3 +1,0 @@
-/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/testFragmentWithDrawerLayout/bin/Debug/testFragmentWithDrawerLayout.dll
-/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/packages/Xamarin.Android.Support.v4.21.0.3.0/lib/MonoAndroid10/Xamarin.Android.Support.v4.dll
-/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/packages/Xamarin.Android.Support.v7.AppCompat.21.0.3.0/lib/MonoAndroid403/Xamarin.Android.Support.v7.AppCompat.dll

@@ -17,7 +17,7 @@ public class User_Application {
 	Socket Sock; 
 
 	public User_Application(){
-		ip_server = "192.168.1.99";
+		ip_server = "192.168.1.51";
 		Port = 4790; 
 
 	}
@@ -56,6 +56,11 @@ public class User_Application {
 		//buffer de mots de passe
 		Byte[] mots_de_passe  = new byte[4];
 
+		//demande de mot de passe : 
+		Byte[] demande_mdp = new byte[1];
+		demande_mdp = Encoding.ASCII.GetBytes("v");//en envoyant un v pour la validation 
+		Sock.Send (demande_mdp, demande_mdp.Length, 0); 
+
 		//Reception de mots de passe
 		Sock.Receive (mots_de_passe, mots_de_passe.Length, 0); 
 
@@ -81,7 +86,7 @@ public class User_Application {
 		hostEntry = Dns.GetHostEntry(ip_server);
 
 		// Boucle ¨¤ travers le AddressList pour obtenir le AddressFamily, pour ¨¦viter
-		// Une exception qui se produit lorsque l'adresse IP de l'h?te ne est pas compatible avec la famille d'adresse
+		// Une exception qui se produit lorsque l'adresse IP de l'hote ne est pas compatible avec la famille d'adresse
 		// (Typique dans le cas IPv6).
 		foreach(IPAddress address in hostEntry.AddressList)
 		{

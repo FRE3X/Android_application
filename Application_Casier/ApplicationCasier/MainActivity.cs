@@ -21,23 +21,19 @@ namespace ApplicationCasier
 		ListView mDrawer;
 		User_Application client;
 		RelativeLayout loading; 
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.Main);
 
 			//mise en place de l'ip et du port : 
-			//client = new User_Application(GetString(Resource.String.ip),int.Parse(GetString(Resource.String.port))); 
 			client = new User_Application(); 
 
 			mDrawerLayout = FindViewById<DrawerLayout> (Resource.Id.myDrawer); 
 			mDrawer = FindViewById<ListView> (Resource.Id.ListView); 
-			//var toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
 			loading = FindViewById<RelativeLayout> (Resource.Id.loading_layout); 
 
-
-			//toolbar.SetNavigationIcon (Resource.Drawable.ic_launcher); 
-			//toolbar.InflateMenu (Resource.Menu.menu); 
 			//on donne le nom des item : 
 			listItem.Add ("Actualiser");
 			listItem.Add ("Mot de passe"); 
@@ -68,11 +64,8 @@ namespace ApplicationCasier
 			switch (item.ItemId)
 			{
 			case Resource.Id.action_settings: 
-
-				FragmentTransaction transaction = FragmentManager.BeginTransaction (); 
-				Dialog_Option dialog = new Dialog_Option (); 
-				dialog.Show (transaction, "Dialog_Option"); 
-
+				Intent intent = new Intent (this, typeof(OptionsActivity));
+				this.StartActivity(intent); 
 				break; 
 
 			}
@@ -128,10 +121,12 @@ namespace ApplicationCasier
 						Dialog_Reservation dialog = new Dialog_Reservation ();
 						//transmission  du numero de casier : 
 						dialog.modifier_num_casier (numero); 
+						//transmission du client : 
+						dialog.GetUserApplication(client); 
 						//Affichage de la fenêtre de dialog : 
-						dialog.Show (transaction, "dialog_Reservation"); 
-					
-					} catch (SocketException i) {//Capture de SocketException
+						dialog.Show (transaction, "dialog_Reservation");
+					 						
+					}catch (SocketException i) {//Capture de SocketException
 						// Quand le handler est appellé il géle MainActiviy le temps d'afficher le toast : 
 						handler_reservation.Post (() => {
 							Toast toast = Toast.MakeText (this, i.Message, ToastLength.Short);

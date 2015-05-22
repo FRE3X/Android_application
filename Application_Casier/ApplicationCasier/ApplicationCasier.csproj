@@ -57,6 +57,7 @@
     <Compile Include="OptionsActivity.cs" />
     <Compile Include="Dialog_Password.cs" />
     <Compile Include="Dialog_Reservation.cs" />
+    <Compile Include="PasswordActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -89,6 +90,7 @@
     <AndroidResource Include="Resources\layout\ActivityOption.axml" />
     <AndroidResource Include="Resources\layout\Dialog_Password.xml" />
     <AndroidResource Include="Resources\drawable-mdpi\menu.png" />
+    <AndroidResource Include="Resources\layout\ActivityPassword.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

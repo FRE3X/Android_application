@@ -1,7 +1,7 @@
 package md5240c00c28ac3fc55cd5ff5451b2ee8c1;
 
 
-public class OptionsActivity
+public class PasswordActivity
 	extends android.app.Activity
 	implements
 		mono.android.IGCUserPeer
@@ -12,15 +12,15 @@ public class OptionsActivity
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
 			"n_onOptionsItemSelected:(Landroid/view/MenuItem;)Z:GetOnOptionsItemSelected_Landroid_view_MenuItem_Handler\n" +
 			"";
-		mono.android.Runtime.register ("ApplicationCasier.OptionsActivity, ApplicationCasier, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", OptionsActivity.class, __md_methods);
+		mono.android.Runtime.register ("ApplicationCasier.PasswordActivity, ApplicationCasier, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", PasswordActivity.class, __md_methods);
 	}
 
 
-	public OptionsActivity () throws java.lang.Throwable
+	public PasswordActivity () throws java.lang.Throwable
 	{
 		super ();
-		if (getClass () == OptionsActivity.class)
-			mono.android.TypeManager.Activate ("ApplicationCasier.OptionsActivity, ApplicationCasier, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+		if (getClass () == PasswordActivity.class)
+			mono.android.TypeManager.Activate ("ApplicationCasier.PasswordActivity, ApplicationCasier, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

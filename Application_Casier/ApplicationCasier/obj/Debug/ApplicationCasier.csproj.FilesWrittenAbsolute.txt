@@ -34,3 +34,4 @@
 /Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/bin/Debug/Xamarin.Android.Support.v7.AppCompat.dll
 /Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/layout/dialog_password.xml
 /Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/drawable-mdpi/menu.png
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/layout/activitypassword.xml

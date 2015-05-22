@@ -80,12 +80,15 @@ namespace ApplicationCasier
 		{
 			base.OnOptionsItemSelected (item); 
 
+			//activer l'apparition du menu drawerLayout : 
 			if(DrawerToggle.OnOptionsItemSelected(item)){
 				return true; 
 			}
 
+			//Recupére et active le menu des options systéme : 
 			switch (item.ItemId)
 			{
+			//Affiche l'activité "OptionsActivity :
 			case Resource.Id.action_settings: 
 				Intent intent = new Intent (this, typeof(OptionsActivity));
 				this.StartActivity(intent); 
@@ -106,39 +109,57 @@ namespace ApplicationCasier
 				mDrawerLayout.CloseDrawer (mDrawer); 
 				//handler est associé a MainActivity :
 				Handler handler = new Handler (); 
-
 				//Creation du thread :
-				new Thread (delegate(){
+				new Thread (delegate() {
+					Thread.Sleep(2000); 
 					try {
 						//Appelle de la méthode actualiser : 
-						client.connection(); 
+						client.connection (); 
 					} catch (SocketException j) {//Capture de SocketException
-					// Quand le handler est appellé il géle MainActiviy le temps d'afficher le toast : 
-						handler.Post(()=> {
+						
+						// Quand le handler est appellé il géle MainActiviy le temps d'afficher le toast : 
+						handler.Post (() => {
+							//Affichage du message d'erreur
 							Toast toast = Toast.MakeText (this, j.Message, ToastLength.Short);
 							toast.SetGravity (GravityFlags.Center, 0, 0);
-							toast.Show();
+							toast.Show ();
 
 						});
 					}				
-				}).Start();
+				}).Start ();
+
+
 				break;
 
 			case "Mot de passe": 
-				mDrawerLayout.CloseDrawer (mDrawer);//ferme le mdDrawerLayout : 	
+				mDrawerLayout.CloseDrawer (mDrawer);//ferme le mdDrawerLayout  	
+				Intent intent = new Intent (this, typeof(PasswordActivity)); 
+				this.StartActivity (intent); 
+
 				break; 
 			
 			case "Réservation": 
-				mDrawerLayout.CloseDrawer (mDrawer);//ferme le mdDrawerLayout : 
+				mDrawerLayout.CloseDrawer (mDrawer);//ferme le mdDrawerLayout  
 					
 				Handler handler_reservation = new Handler ();
-				Thread thread_reservation = new Thread (delegate () {
 
+				//Affichage du message d'attente : 
+				var LoadingDialog = ProgressDialog.Show (this, "Connexion en cours", "veuillez patienter.", true);
+
+				Thread thread_reservation = new Thread (delegate () {
 					try {
+						//Demande d'un casier : 
 						char[] numero_casier = client.DemandeCasier ();
 						string numero = new string (numero_casier);
+
+						//Si l'exeception n'est pas capturé le LoadingDialog s'arrete :
+						handler_reservation.Post(() => {// Quand le handler est appellé il géle MainActiviy
+							LoadingDialog.Dismiss();  	
+						});
+
 						// pour debug : 
 						//string numero = "12"; 
+
 						//Affichage du dialog frame : 
 						Android.App.FragmentTransaction transaction = FragmentManager.BeginTransaction (); 
 						Dialog_Reservation dialog = new Dialog_Reservation ();
@@ -150,8 +171,12 @@ namespace ApplicationCasier
 						dialog.Show (transaction, "dialog_Reservation");
 					 						
 					}catch (SocketException i) {//Capture de SocketException
-						// Quand le handler est appellé il géle MainActiviy le temps d'afficher le toast : 
+						 
 						handler_reservation.Post (() => {
+							//Arret du LoadingDialog :  
+							LoadingDialog.Dismiss(); 
+
+							//affichage du message d'erreur : 
 							Toast toast = Toast.MakeText (this, i.Message, ToastLength.Short);
 							toast.SetGravity (GravityFlags.Center, 0, 0);
 							toast.Show ();

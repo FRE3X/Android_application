@@ -32,7 +32,26 @@ namespace ApplicationCasier
 			port_text = FindViewById<EditText> (Resource.Id.port_EditText);
 			//valeur_default (); 
 
+			// Modification du menu de l'action bar :
+			ActionBar.SetDisplayHomeAsUpEnabled (true); 
+			ActionBar.SetHomeButtonEnabled (true); 
 		}
+
+		//recuperation du click dans la barre du menu 
+		public override bool OnOptionsItemSelected(IMenuItem item)
+		{
+			//quand l'item est selectionner, renvoi a home : 
+			switch (item.ItemId)
+			{
+			case Android.Resource.Id.Home:
+				Finish();
+				return true;
+
+			default:
+				return base.OnOptionsItemSelected(item);
+			}
+		}
+
 		public void valeur_default(){
 			xml.Load (Assets.Open ("Options.xml")); 
 			node_list = xml.SelectNodes ("/server"); 

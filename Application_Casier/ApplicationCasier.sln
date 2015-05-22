@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "getAddMac", "getAddMac\getA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testfragement", "testfragement\testfragement.csproj", "{28F02412-60C2-4D0A-96BF-9CFC33345724}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testFragmentWithDrawerLayout", "testFragmentWithDrawerLayout\testFragmentWithDrawerLayout.csproj", "{D8ECBE20-4B69-45C1-8BBD-6DFCA3D7DC74}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +25,5 @@ Global
 		{61CF7601-6337-476D-B5BA-DB50FA0F9428}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61CF7601-6337-476D-B5BA-DB50FA0F9428}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61CF7601-6337-476D-B5BA-DB50FA0F9428}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D8ECBE20-4B69-45C1-8BBD-6DFCA3D7DC74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8ECBE20-4B69-45C1-8BBD-6DFCA3D7DC74}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D8ECBE20-4B69-45C1-8BBD-6DFCA3D7DC74}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D8ECBE20-4B69-45C1-8BBD-6DFCA3D7DC74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

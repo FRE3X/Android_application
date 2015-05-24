@@ -1613,7 +1613,7 @@ containing a value of this type.
         public static final int validate=0x7f02003a;
     }
     public static final class id {
-        public static final int ListView=0x7f0a004c;
+        public static final int ListView=0x7f0a004e;
         public static final int RelativeLayout_fragment=0x7f0a0043;
         public static final int action_bar=0x7f0a0031;
         public static final int action_bar_activity_content=0x7f0a0000;
@@ -1628,14 +1628,14 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0a002e;
         public static final int action_mode_bar_stub=0x7f0a002d;
         public static final int action_mode_close_button=0x7f0a0020;
-        public static final int action_settings=0x7f0a004f;
+        public static final int action_settings=0x7f0a0051;
         public static final int activity_chooser_view_content=0x7f0a0021;
         public static final int always=0x7f0a0016;
         public static final int beginning=0x7f0a0013;
-        public static final int button1=0x7f0a0041;
+        public static final int button_save=0x7f0a0041;
         public static final int checkbox=0x7f0a0029;
         public static final int collapseActionView=0x7f0a0017;
-        public static final int content_frame=0x7f0a0048;
+        public static final int content_frame=0x7f0a004a;
         public static final int decor_content_parent=0x7f0a002f;
         public static final int default_activity_button=0x7f0a0024;
         public static final int dialog=0x7f0a001b;
@@ -1650,17 +1650,17 @@ containing a value of this type.
         public static final int icon=0x7f0a0026;
         public static final int ifRoom=0x7f0a0018;
         public static final int image=0x7f0a0023;
-        public static final int imageButtonKeyFree1=0x7f0a0045;
-        public static final int imageButtonKeyFree2=0x7f0a0046;
-        public static final int imageButtonKeyFree3=0x7f0a004b;
+        public static final int imageButtonKeyFree1=0x7f0a0047;
+        public static final int imageButtonKeyFree2=0x7f0a0048;
+        public static final int imageButtonKeyFree3=0x7f0a004d;
         public static final int ip_EditText=0x7f0a003f;
-        public static final int ivIcon=0x7f0a004d;
+        public static final int ivIcon=0x7f0a004f;
         public static final int listMode=0x7f0a0009;
         public static final int list_item=0x7f0a0025;
-        public static final int loading_img=0x7f0a004a;
-        public static final int loading_layout=0x7f0a0049;
+        public static final int loading_img=0x7f0a004c;
+        public static final int loading_layout=0x7f0a004b;
         public static final int middle=0x7f0a0015;
-        public static final int myDrawer=0x7f0a0047;
+        public static final int myDrawer=0x7f0a0049;
         public static final int never=0x7f0a0019;
         public static final int none=0x7f0a000e;
         public static final int normal=0x7f0a000a;
@@ -1686,9 +1686,11 @@ containing a value of this type.
         public static final int submit_area=0x7f0a003c;
         public static final int tabMode=0x7f0a000b;
         public static final int tableLayout1=0x7f0a0042;
-        public static final int textview_numero=0x7f0a0044;
+        public static final int textview_numero=0x7f0a0045;
+        public static final int textview_phrase=0x7f0a0044;
+        public static final int textview_timer=0x7f0a0046;
         public static final int title=0x7f0a0027;
-        public static final int tvTitle=0x7f0a004e;
+        public static final int tvTitle=0x7f0a0050;
         public static final int up=0x7f0a0008;
         public static final int useLogo=0x7f0a0012;
         public static final int withText=0x7f0a001a;

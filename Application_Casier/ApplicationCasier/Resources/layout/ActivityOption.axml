@@ -15,8 +15,8 @@
         android:hint="Entrer votre Port"
         android:inputType="number" />
     <Button
+        android:id="@+id/button_save"
         android:text="Enregistrer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button1" />
+        android:layout_height="wrap_content" />
 </LinearLayout>

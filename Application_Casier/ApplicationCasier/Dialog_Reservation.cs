@@ -12,30 +12,41 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using System.Threading;
+using System.Timers;
+
 
 namespace ApplicationCasier
 {
 	public class Dialog_Reservation : DialogFragment
 	{
 		TextView numero;
+		TextView textview_timer; 
 		ImageButton validate;
 		ImageButton hide; 
 		RelativeLayout layout;
 		//variable récupérer : 
 		User_Application Userapp; 
-		string numero_casier; 
+		string numero_casier;
+		private static System.Timers.Timer timer;
+		private int _countSeconds;
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			base.OnCreateView (inflater, container, savedInstanceState); 
 			var view = inflater.Inflate (Resource.Layout.Dialog_Frame, container, false); 
-
+			Activity.RunOnUiThread(() =>{
+				Start_timer(); 
+			}); 
 			//declaration des objet de la forme : 
 			layout = (RelativeLayout)view.FindViewById (Resource.Id.RelativeLayout_fragment); 
 			numero = (TextView)view.FindViewById (Resource.Id.textview_numero);
 			validate = (ImageButton)view.FindViewById (Resource.Id.imageButtonKeyFree1); 
 			hide = (ImageButton)view.FindViewById (Resource.Id.imageButtonKeyFree2);  
+			textview_timer = (TextView)view.FindViewById (Resource.Id.textview_timer); 
+
+			Start_timer();
+		
 			//ajout du numero casier
-			numero.Text = "le numero du casier est :" + numero_casier; 
+			numero.Text = numero_casier; 
 						
 
 			//au clique de validation : 
@@ -51,6 +62,31 @@ namespace ApplicationCasier
 			//retourne la vue :
 			return view; 
 		}
+		public void Start_timer(){
+			timer = new System.Timers.Timer();
+			//Trigger event every second
+			timer.Interval = 1000;
+			timer.Elapsed += OnTimedEvent;
+			//count down 5 seconds
+			_countSeconds = 20;
+			 
+			timer.Enabled = true;
+			timer.Start (); 
+		}
+		private void OnTimedEvent(object sender, System.Timers.ElapsedEventArgs e)
+		{
+			_countSeconds--;
+
+			textview_timer.Text = "il vous reste " + _countSeconds.ToString ();
+
+			if (_countSeconds == 0)
+			{
+				timer.Stop();
+			}
+		}
+
+
+
 		// mutateur pour modifier le numero du casier
 		public void modifier_num_casier(string numero){
 			numero_casier = numero; 

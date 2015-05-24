@@ -1132,8 +1132,8 @@ namespace ApplicationCasier
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0a004c
-			public const int ListView = 2131361868;
+			// aapt resource value: 0x7f0a004e
+			public const int ListView = 2131361870;
 			
 			// aapt resource value: 0x7f0a0043
 			public const int RelativeLayout_fragment = 2131361859;
@@ -1177,8 +1177,8 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f0a0020
 			public const int action_mode_close_button = 2131361824;
 			
-			// aapt resource value: 0x7f0a004f
-			public const int action_settings = 2131361871;
+			// aapt resource value: 0x7f0a0051
+			public const int action_settings = 2131361873;
 			
 			// aapt resource value: 0x7f0a0021
 			public const int activity_chooser_view_content = 2131361825;
@@ -1190,7 +1190,7 @@ namespace ApplicationCasier
 			public const int beginning = 2131361811;
 			
 			// aapt resource value: 0x7f0a0041
-			public const int button1 = 2131361857;
+			public const int button_save = 2131361857;
 			
 			// aapt resource value: 0x7f0a0029
 			public const int checkbox = 2131361833;
@@ -1198,8 +1198,8 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f0a0017
 			public const int collapseActionView = 2131361815;
 			
-			// aapt resource value: 0x7f0a0048
-			public const int content_frame = 2131361864;
+			// aapt resource value: 0x7f0a004a
+			public const int content_frame = 2131361866;
 			
 			// aapt resource value: 0x7f0a002f
 			public const int decor_content_parent = 2131361839;
@@ -1243,20 +1243,20 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f0a0023
 			public const int image = 2131361827;
 			
-			// aapt resource value: 0x7f0a0045
-			public const int imageButtonKeyFree1 = 2131361861;
+			// aapt resource value: 0x7f0a0047
+			public const int imageButtonKeyFree1 = 2131361863;
 			
-			// aapt resource value: 0x7f0a0046
-			public const int imageButtonKeyFree2 = 2131361862;
+			// aapt resource value: 0x7f0a0048
+			public const int imageButtonKeyFree2 = 2131361864;
 			
-			// aapt resource value: 0x7f0a004b
-			public const int imageButtonKeyFree3 = 2131361867;
+			// aapt resource value: 0x7f0a004d
+			public const int imageButtonKeyFree3 = 2131361869;
 			
 			// aapt resource value: 0x7f0a003f
 			public const int ip_EditText = 2131361855;
 			
-			// aapt resource value: 0x7f0a004d
-			public const int ivIcon = 2131361869;
+			// aapt resource value: 0x7f0a004f
+			public const int ivIcon = 2131361871;
 			
 			// aapt resource value: 0x7f0a0009
 			public const int listMode = 2131361801;
@@ -1264,17 +1264,17 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f0a0025
 			public const int list_item = 2131361829;
 			
-			// aapt resource value: 0x7f0a004a
-			public const int loading_img = 2131361866;
+			// aapt resource value: 0x7f0a004c
+			public const int loading_img = 2131361868;
 			
-			// aapt resource value: 0x7f0a0049
-			public const int loading_layout = 2131361865;
+			// aapt resource value: 0x7f0a004b
+			public const int loading_layout = 2131361867;
 			
 			// aapt resource value: 0x7f0a0015
 			public const int middle = 2131361813;
 			
-			// aapt resource value: 0x7f0a0047
-			public const int myDrawer = 2131361863;
+			// aapt resource value: 0x7f0a0049
+			public const int myDrawer = 2131361865;
 			
 			// aapt resource value: 0x7f0a0019
 			public const int never = 2131361817;
@@ -1351,14 +1351,20 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f0a0042
 			public const int tableLayout1 = 2131361858;
 			
+			// aapt resource value: 0x7f0a0045
+			public const int textview_numero = 2131361861;
+			
 			// aapt resource value: 0x7f0a0044
-			public const int textview_numero = 2131361860;
+			public const int textview_phrase = 2131361860;
+			
+			// aapt resource value: 0x7f0a0046
+			public const int textview_timer = 2131361862;
 			
 			// aapt resource value: 0x7f0a0027
 			public const int title = 2131361831;
 			
-			// aapt resource value: 0x7f0a004e
-			public const int tvTitle = 2131361870;
+			// aapt resource value: 0x7f0a0050
+			public const int tvTitle = 2131361872;
 			
 			// aapt resource value: 0x7f0a0008
 			public const int up = 2131361800;

@@ -23,6 +23,7 @@ namespace ApplicationCasier
 		ArrayAdapter mAdapter; 
 		ListView mDrawer;
 		User_Application client;
+		ChangeOptions myoption; 
 		RelativeLayout loading; 
 		ActionBarDrawerToggle DrawerToggle; 
 		protected override void OnCreate (Bundle bundle)
@@ -30,7 +31,9 @@ namespace ApplicationCasier
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.Main);
 
-			//mise en place de l'ip et du port : 
+			//initialisation des option de l'application avec le constructeur de ChangeOption :
+			myoption = new ChangeOptions(); 
+			//creation de l'objet client :  
 			client = new User_Application(); 
 
 			mDrawerLayout = FindViewById<DrawerLayout> (Resource.Id.myDrawer); 
@@ -57,9 +60,10 @@ namespace ApplicationCasier
 			//Modification du menu de ActionBar : 
 			ActionBar.SetDisplayHomeAsUpEnabled (true); 
 			ActionBar.SetHomeButtonEnabled (true); 
-
-
+						 
 		}
+
+	
 
 		//mise en place du boutton pour l'activation du DrawerLayout : 
 		protected override void OnPostCreate (Bundle savedInstance){
@@ -149,8 +153,8 @@ namespace ApplicationCasier
 				Thread thread_reservation = new Thread (delegate () {
 					try {
 						//Demande d'un casier : 
-						char[] numero_casier = client.DemandeCasier ();
-						string numero = new string (numero_casier);
+						//char[] numero_casier = client.DemandeCasier ();
+						//string numero = new string (numero_casier);
 
 						//Si l'exeception n'est pas capturé le LoadingDialog s'arrete :
 						handler_reservation.Post(() => {// Quand le handler est appellé il géle MainActiviy
@@ -158,7 +162,7 @@ namespace ApplicationCasier
 						});
 
 						// pour debug : 
-						//string numero = "12"; 
+						string numero = "12"; 
 
 						//Affichage du dialog frame : 
 						Android.App.FragmentTransaction transaction = FragmentManager.BeginTransaction (); 
@@ -193,6 +197,7 @@ namespace ApplicationCasier
 
 
 	}
+
 }
 
 

@@ -1117,7 +1117,10 @@ namespace ApplicationCasier
 			public const int menu = 2130837561;
 			
 			// aapt resource value: 0x7f02003a
-			public const int validate = 2130837562;
+			public const int motDePasse = 2130837562;
+			
+			// aapt resource value: 0x7f02003b
+			public const int validate = 2130837563;
 			
 			static Drawable()
 			{
@@ -1135,8 +1138,8 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f0a004e
 			public const int ListView = 2131361870;
 			
-			// aapt resource value: 0x7f0a0043
-			public const int RelativeLayout_fragment = 2131361859;
+			// aapt resource value: 0x7f0a0044
+			public const int RelativeLayout_fragment = 2131361860;
 			
 			// aapt resource value: 0x7f0a0031
 			public const int action_bar = 2131361841;
@@ -1243,8 +1246,8 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f0a0023
 			public const int image = 2131361827;
 			
-			// aapt resource value: 0x7f0a0047
-			public const int imageButtonKeyFree1 = 2131361863;
+			// aapt resource value: 0x7f0a0043
+			public const int imageButtonKeyFree1 = 2131361859;
 			
 			// aapt resource value: 0x7f0a0048
 			public const int imageButtonKeyFree2 = 2131361864;
@@ -1351,14 +1354,14 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f0a0042
 			public const int tableLayout1 = 2131361858;
 			
-			// aapt resource value: 0x7f0a0045
-			public const int textview_numero = 2131361861;
-			
-			// aapt resource value: 0x7f0a0044
-			public const int textview_phrase = 2131361860;
-			
 			// aapt resource value: 0x7f0a0046
-			public const int textview_timer = 2131361862;
+			public const int textview_numero = 2131361862;
+			
+			// aapt resource value: 0x7f0a0045
+			public const int textview_phrase = 2131361861;
+			
+			// aapt resource value: 0x7f0a0047
+			public const int textview_timer = 2131361863;
 			
 			// aapt resource value: 0x7f0a0027
 			public const int title = 2131361831;

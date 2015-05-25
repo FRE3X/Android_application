@@ -35,3 +35,4 @@
 /Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/uploadflags.txt
 /Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/ApplicationCasier.dll
 /Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/ApplicationCasier.dll.mdb
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/obj/Debug/res/drawable-xxhdpi/motdepasse.png

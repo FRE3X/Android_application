@@ -1610,11 +1610,12 @@ containing a value of this type.
         public static final int keyfree=0x7f020037;
         public static final int loading=0x7f020038;
         public static final int menu=0x7f020039;
-        public static final int validate=0x7f02003a;
+        public static final int motdepasse=0x7f02003a;
+        public static final int validate=0x7f02003b;
     }
     public static final class id {
         public static final int ListView=0x7f0a004e;
-        public static final int RelativeLayout_fragment=0x7f0a0043;
+        public static final int RelativeLayout_fragment=0x7f0a0044;
         public static final int action_bar=0x7f0a0031;
         public static final int action_bar_activity_content=0x7f0a0000;
         public static final int action_bar_container=0x7f0a0030;
@@ -1650,7 +1651,7 @@ containing a value of this type.
         public static final int icon=0x7f0a0026;
         public static final int ifRoom=0x7f0a0018;
         public static final int image=0x7f0a0023;
-        public static final int imageButtonKeyFree1=0x7f0a0047;
+        public static final int imageButtonKeyFree1=0x7f0a0043;
         public static final int imageButtonKeyFree2=0x7f0a0048;
         public static final int imageButtonKeyFree3=0x7f0a004d;
         public static final int ip_EditText=0x7f0a003f;
@@ -1686,9 +1687,9 @@ containing a value of this type.
         public static final int submit_area=0x7f0a003c;
         public static final int tabMode=0x7f0a000b;
         public static final int tableLayout1=0x7f0a0042;
-        public static final int textview_numero=0x7f0a0045;
-        public static final int textview_phrase=0x7f0a0044;
-        public static final int textview_timer=0x7f0a0046;
+        public static final int textview_numero=0x7f0a0046;
+        public static final int textview_phrase=0x7f0a0045;
+        public static final int textview_timer=0x7f0a0047;
         public static final int title=0x7f0a0027;
         public static final int tvTitle=0x7f0a0050;
         public static final int up=0x7f0a0008;
@@ -1726,10 +1727,9 @@ containing a value of this type.
         public static final int activityoption=0x7f030017;
         public static final int activitypassword=0x7f030018;
         public static final int dialog_frame=0x7f030019;
-        public static final int dialog_password=0x7f03001a;
-        public static final int main=0x7f03001b;
-        public static final int singlerow=0x7f03001c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
+        public static final int main=0x7f03001a;
+        public static final int singlerow=0x7f03001b;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
     }
     public static final class menu {
         public static final int menu=0x7f0c0000;

@@ -13,6 +13,7 @@ using Android.Views;
 using Android.Widget;
 using System.Threading;
 using System.Timers;
+using System.Threading.Tasks;
 
 
 namespace ApplicationCasier
@@ -27,15 +28,12 @@ namespace ApplicationCasier
 		//variable récupérer : 
 		User_Application Userapp; 
 		string numero_casier;
-		private static System.Timers.Timer timer;
-		private int _countSeconds;
+
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			base.OnCreateView (inflater, container, savedInstanceState); 
 			var view = inflater.Inflate (Resource.Layout.Dialog_Frame, container, false); 
-			Activity.RunOnUiThread(() =>{
-				Start_timer(); 
-			}); 
+
 			//declaration des objet de la forme : 
 			layout = (RelativeLayout)view.FindViewById (Resource.Id.RelativeLayout_fragment); 
 			numero = (TextView)view.FindViewById (Resource.Id.textview_numero);
@@ -43,8 +41,8 @@ namespace ApplicationCasier
 			hide = (ImageButton)view.FindViewById (Resource.Id.imageButtonKeyFree2);  
 			textview_timer = (TextView)view.FindViewById (Resource.Id.textview_timer); 
 
-			Start_timer();
-		
+			//Start_timer();
+
 			//ajout du numero casier
 			numero.Text = numero_casier; 
 						
@@ -62,28 +60,26 @@ namespace ApplicationCasier
 			//retourne la vue :
 			return view; 
 		}
-		public void Start_timer(){
-			timer = new System.Timers.Timer();
-			//Trigger event every second
-			timer.Interval = 1000;
-			timer.Elapsed += OnTimedEvent;
-			//count down 5 seconds
-			_countSeconds = 20;
-			 
-			timer.Enabled = true;
-			timer.Start (); 
-		}
-		private void OnTimedEvent(object sender, System.Timers.ElapsedEventArgs e)
+		public override void OnCreate (Bundle savedInstanceState)
 		{
-			_countSeconds--;
+			 base.OnCreate (savedInstanceState);
+			 RunUpdateLoop ();
 
-			textview_timer.Text = "il vous reste " + _countSeconds.ToString ();
-
-			if (_countSeconds == 0)
+		}
+		//Compteur asynchone : 
+		private async void RunUpdateLoop()
+		{
+			int durer = 15;//variable de durer
+			while (true)//on boucle a l'infini 
 			{
-				timer.Stop();
+				await Task.Delay(1000);//intervale d'une seconde entre la décrementation
+				textview_timer.Text = "il vous reste " + durer.ToString() + " seconde pour effectuer un choix.";
+				if (durer == 0)
+					base.OnDestroyView ();//arriver a 0 seconde on détruit le fragment  
+				durer--;//decrementation 
 			}
 		}
+
 
 
 

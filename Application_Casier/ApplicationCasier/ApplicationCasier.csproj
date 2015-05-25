@@ -88,7 +88,6 @@
     <AndroidResource Include="Resources\drawable-mdpi\validate.png" />
     <AndroidResource Include="Resources\drawable-mdpi\loading.gif" />
     <AndroidResource Include="Resources\layout\ActivityOption.axml" />
-    <AndroidResource Include="Resources\layout\Dialog_Password.xml" />
     <AndroidResource Include="Resources\drawable-mdpi\menu.png" />
     <AndroidResource Include="Resources\layout\ActivityPassword.axml" />
   </ItemGroup>

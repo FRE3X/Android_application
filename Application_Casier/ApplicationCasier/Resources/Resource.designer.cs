@@ -1486,16 +1486,13 @@ namespace ApplicationCasier
 			public const int Dialog_Frame = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int Dialog_Password = 2130903066;
+			public const int Main = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int Main = 2130903067;
+			public const int SingleRow = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int SingleRow = 2130903068;
-			
-			// aapt resource value: 0x7f03001d
-			public const int support_simple_spinner_dropdown_item = 2130903069;
+			public const int support_simple_spinner_dropdown_item = 2130903068;
 			
 			static Layout()
 			{

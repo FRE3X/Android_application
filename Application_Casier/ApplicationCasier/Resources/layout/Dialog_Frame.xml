@@ -5,45 +5,52 @@
     android:minWidth="300dp"
     android:minHeight="400dp"
     android:id="@+id/RelativeLayout_fragment">
-<!--      phrase  		-->
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25px"
-        android:gravity="center">
-        <TextView
-            android:id="@+id/textview_phrase"
-            android:layout_width="wrap_content"
+        android:layout_height="fill_parent">
+    <!--      phrase  		-->
+        <RelativeLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:text="le numero du casier est : " />
-    </RelativeLayout>
-<!--         affichage du numero :           -->
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginTop="25px"
-        android:gravity="center">
-        <TextView
-            android:layout_centerHorizontal="true"
-            android:id="@+id/textview_numero"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="38sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginTop="25px"
-        android:gravity="center">
-        <TextView
-            android:layout_centerHorizontal="true"
-            android:id="@+id/textview_timer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="22sp" />
-    </RelativeLayout>
+            android:layout_marginTop="25px"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/textview_phrase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="le numero du casier est : " />
+        </RelativeLayout>
+    <!--         affichage du numero :           -->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/textview_numero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="38sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    <!--     affichage du delay:           -->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/textview_timer"
+                android:gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
 <!--	affichage des bouttons  	-->
     <LinearLayout
         android:orientation="horizontal"

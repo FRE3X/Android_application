@@ -23,7 +23,7 @@ namespace ApplicationCasier
 		ArrayAdapter mAdapter; 
 		ListView mDrawer;
 		User_Application client;
-		ChangeOptions myoption; 
+		FilesAcces myoption; 
 		RelativeLayout loading; 
 		ActionBarDrawerToggle DrawerToggle; 
 		protected override void OnCreate (Bundle bundle)
@@ -32,9 +32,10 @@ namespace ApplicationCasier
 			SetContentView (Resource.Layout.Main);
 
 			//initialisation des option de l'application avec le constructeur de ChangeOption :
-			myoption = new ChangeOptions(); 
-			//creation de l'objet client :  
-			client = new User_Application(); 
+			myoption = new FilesAcces(); 
+			//creation de l'objet client avec les parametre du fichier xml :
+			change_userApplication(); 
+			//client = new User_Application(myoption.read_IP(),Convert.ToInt32(myoption.read_port())); 
 
 			mDrawerLayout = FindViewById<DrawerLayout> (Resource.Id.myDrawer); 
 			mDrawer = FindViewById<ListView> (Resource.Id.ListView); 
@@ -61,6 +62,12 @@ namespace ApplicationCasier
 			ActionBar.SetDisplayHomeAsUpEnabled (true); 
 			ActionBar.SetHomeButtonEnabled (true); 
 						 
+		}
+
+		public void change_userApplication(){
+			string ip = myoption.read_IP (); 
+			int port = Convert.ToInt32(myoption.read_port ()); 
+		
 		}
 
 	
@@ -153,8 +160,8 @@ namespace ApplicationCasier
 				Thread thread_reservation = new Thread (delegate () {
 					try {
 						//Demande d'un casier : 
-						//char[] numero_casier = client.DemandeCasier ();
-						//string numero = new string (numero_casier);
+						char[] numero_casier = client.DemandeCasier ();
+						string numero = new string (numero_casier);
 
 						//Si l'exeception n'est pas capturé le LoadingDialog s'arrete :
 						handler_reservation.Post(() => {// Quand le handler est appellé il géle MainActiviy
@@ -162,7 +169,7 @@ namespace ApplicationCasier
 						});
 
 						// pour debug : 
-						string numero = "12"; 
+						//string numero = "12"; 
 
 						//Affichage du dialog frame : 
 						Android.App.FragmentTransaction transaction = FragmentManager.BeginTransaction (); 

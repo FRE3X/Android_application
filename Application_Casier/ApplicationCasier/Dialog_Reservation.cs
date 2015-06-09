@@ -92,15 +92,13 @@ namespace ApplicationCasier
 			Userapp = App;
 		}
 		private void Affichage_mdp(View v){
-			
-
 			//Affichage du message d'attente : 
 			var LoadingDialog = ProgressDialog.Show (v.Context, "Connexion en cours", "veuillez patienter.", true);
 			try{
 				//recuperation du mots de passe :
 				char[] numero_casier = Userapp.recuperation_mdp(); 
 				string num_casier = new string(numero_casier); 
-
+				LoadingDialog.Dismiss(); 
 				//Creation de l'alerte mots de passe : 
 				var alert_mdp = new AlertDialog.Builder(v.Context);
 				alert_mdp.SetTitle("Mots de passe");
@@ -117,11 +115,10 @@ namespace ApplicationCasier
 				alert_mdp.SetMessage("Votre mot de passe est : " + num_casier);
 				alert_mdp.Show(); 
 
-				//Arret du LoadingDialog :  
-				LoadingDialog.Dismiss(); 
+
+				 
 			}catch(SocketException i){
-				//Arret du LoadingDialog :  
-				LoadingDialog.Dismiss(); 
+				
 
 				//affichage du message d'erreur : 
 				Toast toast = Toast.MakeText (v.Context, i.Message, ToastLength.Short);

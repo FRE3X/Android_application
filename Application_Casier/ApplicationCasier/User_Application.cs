@@ -16,9 +16,9 @@ public class User_Application {
 	int Port; 
 	Socket Sock; 
 
-	public User_Application(){
-		ip_server = "192.168.1.101";
-		Port = 4791; 
+	public User_Application(string ip,int port){
+		ip_server = ip;
+		Port = port; 
 
 	}
 

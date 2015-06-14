@@ -36,9 +36,9 @@ namespace Files
 				//crée une nouvel instance de la classe : 
 				Gestion_Casiers casiers = new Gestion_Casiers();
 				//crée 3 casier 
-				casiers.List_casiers.Add ("");//casier1
-				casiers.List_casiers.Add ("");//casier2
-				casiers.List_casiers.Add ("");//casier3
+				casiers.List_Lockers.Add ("");//casier1
+				casiers.List_Lockers.Add ("");//casier2
+				casiers.List_Lockers.Add ("");//casier3
 
 				//crée un nouveau filestream pour écrire dans le fichier : 
 				writer = new System.Xml.Serialization.XmlSerializer(typeof(Gestion_Casiers)); 
@@ -79,23 +79,15 @@ namespace Files
 		}
 		//modifie le fichier l'ip et le port dans le fichier xml
 		public void modify_options(string p_ip,string p_port){
-			//chemin d'accés : 
-			var documents = System.Environment.GetFolderPath (System.Environment.SpecialFolder.MyDocuments);		
-			var path = System.IO.Path.Combine(documents, "options.xml");
-			//Creation du FileStream
-			FileStream file = new FileStream(path,FileMode.Open); 
-
-			Option option = new Option ();
-			//ecriture dans l'objet "tampon" appeller option : 
-			option.ip = p_ip; 
-			option.port = p_port;
-
-			//ecriture avec l'objet tampon dans le fichier xml : 
-			writer = new System.Xml.Serialization.XmlSerializer (typeof(Option)); 
-			writer.Serialize (file, option); 
-
-			//ferme le stream pour éviter les erreurs
-			file.Close();
+			Option options = new Option (); 
+			options.ip = p_ip; 
+			options.port = p_port; 
+			//crée un nouveau filestream pour écrire dans le fichier : 
+			writer = new System.Xml.Serialization.XmlSerializer(typeof(Option)); 
+			TextWriter WriteFileStream = new StreamWriter (path_option);
+			writer.Serialize (WriteFileStream, options); 
+			//ferme le stream : 
+			WriteFileStream.Close (); 
 
 		}
 		//méthode pour écrire le numéro de casier et le mots de passe : 
@@ -112,11 +104,11 @@ namespace Files
 			ReadFileStream.Close(); 
 
 			//on boucle la liste casier 
-			for (int i = 0; i < casiers.List_casiers.Count; i++) {
+			for (int i = 0; i < casiers.List_Lockers.Count; i++) {
 				//si un string de List_casier et vide alors :
-				if (casiers.List_casiers[i] == "") {
+				if (casiers.List_Lockers[i] == "") {
 					//on copie le mdp et le n_casier dedans :
-					casiers.List_casiers[i]= mdp + "|" + n_casier + "|";
+					casiers.List_Lockers[i]= mdp + "|" + n_casier + "|";
 					write = true;//pour confirmer que l'écriture a bien était réaliser 
 					break;//on sort de la boucle 
 				}
@@ -143,7 +135,7 @@ namespace Files
 			Gestion_Casiers casiers = (Gestion_Casiers)reader.Deserialize (ReadFileStream);
 			//on ferme le stream : 
 			ReadFileStream.Close(); 
-			foreach (string casier in casiers.List_casiers) {
+			foreach (string casier in casiers.List_Lockers) {
 				recuperation_casier += casier; 
 			}
 
@@ -158,11 +150,11 @@ namespace Files
 	}
 	//Classe "Buffer" pour le writer xml 
 	public class Gestion_Casiers{
-		private List<string> list_casiers = new List<string>();
-		public List<string> List_casiers
+		private List<string> list_lockers = new List<string>();
+		public List<string> List_Lockers
 		{
-			get {return list_casiers; }
-			set {list_casiers = value;}
+			get {return list_lockers; }
+			set {list_lockers = value;}
 		}
 	}
 

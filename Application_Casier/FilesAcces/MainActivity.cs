@@ -26,7 +26,8 @@ namespace Files
 			
 			button.Click += delegate {
 				files = new FilesAcces ();
-				bool b = files.write_casier ("s", "t"); 
+				bool b = files.write_casier ("s", "t");
+				files.modify_options("192.168.1.1","2344"); 
 				string r = files.read_port(); 
 				Toast.MakeText(this,r,ToastLength.Short).Show(); 
 			};

@@ -35,7 +35,8 @@ namespace ApplicationCasier
 
 			button_save.Click += delegate {
 				FilesAcces file = new FilesAcces(); 
-				file.modify_options(ip_text.Text,port_text.Text); 
+				file.modify_options(ip_text.Text,port_text.Text);
+
 			};
 		}
 

@@ -34,7 +34,7 @@ namespace ApplicationCasier
 			//initialisation des option de l'application avec le constructeur de ChangeOption :
 			myoption = new FilesAcces(); 
 			//creation de l'objet client avec les parametre du fichier xml :
-			change_userApplication(); 
+	        change_userApplication(); 
 			//client = new User_Application(myoption.read_IP(),Convert.ToInt32(myoption.read_port())); 
 
 			mDrawerLayout = FindViewById<DrawerLayout> (Resource.Id.myDrawer); 

@@ -7,12 +7,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "getAddMac", "getAddMac\getA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testfragement", "testfragement\testfragement.csproj", "{28F02412-60C2-4D0A-96BF-9CFC33345724}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Files", "FilesAcces\Files.csproj", "{02597AC3-C52A-4753-B76D-F9EACBC0C9D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesAcces.UITests", "FilesAcces.UITests\FilesAcces.UITests.csproj", "{0503F717-7CF2-44F3-A2B9-20DF48A8E070}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02597AC3-C52A-4753-B76D-F9EACBC0C9D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02597AC3-C52A-4753-B76D-F9EACBC0C9D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02597AC3-C52A-4753-B76D-F9EACBC0C9D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02597AC3-C52A-4753-B76D-F9EACBC0C9D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0503F717-7CF2-44F3-A2B9-20DF48A8E070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0503F717-7CF2-44F3-A2B9-20DF48A8E070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0503F717-7CF2-44F3-A2B9-20DF48A8E070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0503F717-7CF2-44F3-A2B9-20DF48A8E070}.Release|Any CPU.Build.0 = Release|Any CPU
 		{28F02412-60C2-4D0A-96BF-9CFC33345724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{28F02412-60C2-4D0A-96BF-9CFC33345724}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28F02412-60C2-4D0A-96BF-9CFC33345724}.Release|Any CPU.ActiveCfg = Release|Any CPU

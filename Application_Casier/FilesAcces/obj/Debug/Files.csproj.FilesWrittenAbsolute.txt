@@ -1,0 +1,17 @@
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/obj/Debug/MonoAndroid,Version=v4.4.AssemblyAttribute.cs
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/obj/Debug/FilesAcces.dll
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/obj/Debug/FilesAcces.dll.mdb
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/bin/Debug/FilesAcces.dll.mdb
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/bin/Debug/FilesAcces.dll
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/bin/Debug/com.companyname.filesacces.apk
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/obj/Debug/android/bin/com.companyname.filesacces.apk
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/obj/Debug/res/layout/main.xml
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/obj/Debug/res/values/strings.xml
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/obj/Debug/res/drawable-hdpi/icon.png
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/obj/Debug/res/drawable-mdpi/icon.png
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/obj/Debug/res/drawable-xhdpi/icon.png
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/obj/Debug/res/drawable-xxhdpi/icon.png
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/obj/Debug/res/drawable-xxxhdpi/icon.png
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/obj/Debug/R.cs.flag
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/bin/Debug/com.companyname.filesacces-Signed.apk
+/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/FilesAcces/obj/Debug/uploadflags.txt

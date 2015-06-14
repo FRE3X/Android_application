@@ -41,8 +41,6 @@ namespace ApplicationCasier
 			hide = (ImageButton)view.FindViewById (Resource.Id.imageButtonKeyFree2);  
 			textview_timer = (TextView)view.FindViewById (Resource.Id.textview_timer); 
 
-			//Start_timer();
-
 			//ajout du numero casier
 			numero.Text = numero_casier; 
 						

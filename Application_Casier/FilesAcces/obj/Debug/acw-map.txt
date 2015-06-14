@@ -1,0 +1,4 @@
+Files.MainActivity, FilesAcces;md5a9fde8afa0825593f54965de5f1ce59c.MainActivity
+Files.MainActivity, FilesAcces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5a9fde8afa0825593f54965de5f1ce59c.MainActivity
+Files.MainActivity;md5a9fde8afa0825593f54965de5f1ce59c.MainActivity
+files.MainActivity;md5a9fde8afa0825593f54965de5f1ce59c.MainActivity

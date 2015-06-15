@@ -1135,11 +1135,17 @@ namespace ApplicationCasier
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f08004e
-			public const int ListView = 2131230798;
+			// aapt resource value: 0x7f080051
+			public const int ListView = 2131230801;
+			
+			// aapt resource value: 0x7f080045
+			public const int ListView_casier = 2131230789;
 			
 			// aapt resource value: 0x7f080044
-			public const int RelativeLayout_fragment = 2131230788;
+			public const int ListView_mdp = 2131230788;
+			
+			// aapt resource value: 0x7f080046
+			public const int RelativeLayout_fragment = 2131230790;
 			
 			// aapt resource value: 0x7f080031
 			public const int action_bar = 2131230769;
@@ -1180,8 +1186,8 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080020
 			public const int action_mode_close_button = 2131230752;
 			
-			// aapt resource value: 0x7f080051
-			public const int action_settings = 2131230801;
+			// aapt resource value: 0x7f080054
+			public const int action_settings = 2131230804;
 			
 			// aapt resource value: 0x7f080021
 			public const int activity_chooser_view_content = 2131230753;
@@ -1201,8 +1207,8 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080017
 			public const int collapseActionView = 2131230743;
 			
-			// aapt resource value: 0x7f08004a
-			public const int content_frame = 2131230794;
+			// aapt resource value: 0x7f08004d
+			public const int content_frame = 2131230797;
 			
 			// aapt resource value: 0x7f08002f
 			public const int decor_content_parent = 2131230767;
@@ -1249,17 +1255,17 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080043
 			public const int imageButtonKeyFree1 = 2131230787;
 			
-			// aapt resource value: 0x7f080048
-			public const int imageButtonKeyFree2 = 2131230792;
+			// aapt resource value: 0x7f08004a
+			public const int imageButtonKeyFree2 = 2131230794;
 			
-			// aapt resource value: 0x7f08004d
-			public const int imageButtonKeyFree3 = 2131230797;
+			// aapt resource value: 0x7f080050
+			public const int imageButtonKeyFree3 = 2131230800;
 			
 			// aapt resource value: 0x7f08003f
 			public const int ip_EditText = 2131230783;
 			
-			// aapt resource value: 0x7f08004f
-			public const int ivIcon = 2131230799;
+			// aapt resource value: 0x7f080052
+			public const int ivIcon = 2131230802;
 			
 			// aapt resource value: 0x7f080009
 			public const int listMode = 2131230729;
@@ -1267,17 +1273,17 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080025
 			public const int list_item = 2131230757;
 			
-			// aapt resource value: 0x7f08004c
-			public const int loading_img = 2131230796;
+			// aapt resource value: 0x7f08004f
+			public const int loading_img = 2131230799;
 			
-			// aapt resource value: 0x7f08004b
-			public const int loading_layout = 2131230795;
+			// aapt resource value: 0x7f08004e
+			public const int loading_layout = 2131230798;
 			
 			// aapt resource value: 0x7f080015
 			public const int middle = 2131230741;
 			
-			// aapt resource value: 0x7f080049
-			public const int myDrawer = 2131230793;
+			// aapt resource value: 0x7f08004c
+			public const int myDrawer = 2131230796;
 			
 			// aapt resource value: 0x7f080019
 			public const int never = 2131230745;
@@ -1354,20 +1360,23 @@ namespace ApplicationCasier
 			// aapt resource value: 0x7f080042
 			public const int tableLayout1 = 2131230786;
 			
-			// aapt resource value: 0x7f080046
-			public const int textview_numero = 2131230790;
+			// aapt resource value: 0x7f08004b
+			public const int textview_1 = 2131230795;
 			
-			// aapt resource value: 0x7f080045
-			public const int textview_phrase = 2131230789;
+			// aapt resource value: 0x7f080048
+			public const int textview_numero = 2131230792;
 			
 			// aapt resource value: 0x7f080047
-			public const int textview_timer = 2131230791;
+			public const int textview_phrase = 2131230791;
+			
+			// aapt resource value: 0x7f080049
+			public const int textview_timer = 2131230793;
 			
 			// aapt resource value: 0x7f080027
 			public const int title = 2131230759;
 			
-			// aapt resource value: 0x7f080050
-			public const int tvTitle = 2131230800;
+			// aapt resource value: 0x7f080053
+			public const int tvTitle = 2131230803;
 			
 			// aapt resource value: 0x7f080008
 			public const int up = 2131230728;
@@ -1489,13 +1498,16 @@ namespace ApplicationCasier
 			public const int Dialog_Frame = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int Main = 2130903066;
+			public const int LockerRow = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int SingleRow = 2130903067;
+			public const int Main = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int support_simple_spinner_dropdown_item = 2130903068;
+			public const int SingleRow = 2130903068;
+			
+			// aapt resource value: 0x7f03001d
+			public const int support_simple_spinner_dropdown_item = 2130903069;
 			
 			static Layout()
 			{

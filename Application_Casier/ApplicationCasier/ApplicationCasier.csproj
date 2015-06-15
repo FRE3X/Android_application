@@ -91,6 +91,7 @@
     <AndroidResource Include="Resources\drawable-mdpi\menu.png" />
     <AndroidResource Include="Resources\layout\ActivityPassword.axml" />
     <AndroidResource Include="Resources\drawable-xxhdpi\motDePasse.png" />
+    <AndroidResource Include="Resources\layout\LockerRow.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

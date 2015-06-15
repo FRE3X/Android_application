@@ -1,22 +1,20 @@
 ﻿<Properties StartupItem="ApplicationCasier/ApplicationCasier.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.03b29b3b25190719" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FilesAcces/FilesAcces.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="FilesAcces/MainActivity.cs" Line="30" Column="49" />
-      <File FileName="FilesAcces/FilesAcces.cs" Line="141" Column="4" />
+      <File FileName="ApplicationCasier/MainActivity.cs" Line="40" Column="1" />
+      <File FileName="ApplicationCasier/FilesAcces.cs" Line="53" Column="63" />
+      <File FileName="ApplicationCasier/PasswordActivity.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/FilesAcces.cs" line="64" column="1" />
-      <Breakpoint file="/Users/FRE3X/hubiC/Documents/IRIS/Projet/Callot/Application/Android_application/Application_Casier/ApplicationCasier/FilesAcces.cs" line="30" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="ApplicationCasier/User_Application.cs" line="35" offsetX="247" offsetY="544" expression="ip_server" liveUpdate="False" />
     <Watch file="FilesAcces/FilesAcces.cs" line="126" offsetX="436" offsetY="1875" expression="recuperation_casier" liveUpdate="False" />
     <Watch file="FilesAcces/MainActivity.cs" line="29" offsetX="479" offsetY="405" expression="b" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.testfragement MonoForAntroid.PreferredDevice="Nexus 4" AndroidDesignerPreferredDevice="Nexus 4" />
   <MonoDevelop.Ide.ItemProperties.ApplicationCasier MonoForAntroid.PreferredDevice="Nexus 4" AndroidDesignerPreferredDevice="Nexus 4" />
+  <MonoDevelop.Ide.ItemProperties.testfragement MonoForAntroid.PreferredDevice="Nexus 4" AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>

@@ -19,7 +19,8 @@ namespace ApplicationCasier
 		//TextView mdp1,mdp2,mdp3; 
 		//TextView c1,c2,c3;
 		List<string> list_mdp = new List<string>();  
-		List<string> list_locker = new List<string>();  
+		List<string> list_locker = new List<string>(); 
+		Button button_effacer; 
 		ArrayAdapter mAdaptater_mdp;
 		ArrayAdapter mAdaptateur_locker; 
 		ListView listview_mdp;
@@ -28,14 +29,20 @@ namespace ApplicationCasier
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.ActivityPassword); 
-
+		 	
 			listview_mdp = FindViewById<ListView> (Resource.Id.ListView_mdp); 
 			listview_locker = FindViewById<ListView> (Resource.Id.ListView_casier); 
-
+			button_effacer = FindViewById<Button> (Resource.Id.button_casier); 
 			// Modification du menu de l'action bar :
 			ActionBar.SetDisplayHomeAsUpEnabled (true); 
-			ActionBar.SetHomeButtonEnabled (true); 
+			ActionBar.SetHomeButtonEnabled (true);
+			button_effacer.Click += delegate {
+				FilesAcces files = new FilesAcces(); 
+				files.clear_locker();
+				Finish();  
+			};
 			recuperation (); 
+
 		}
 		//recuperation du click dans la barre du menu 
 		public override bool OnOptionsItemSelected(IMenuItem item)
@@ -53,7 +60,6 @@ namespace ApplicationCasier
 		}
 		public void recuperation(){
 			FilesAcces files = new FilesAcces ();
-			files.clear_locker (); 
 			string recup = files.read_casiers (); 
 
 
@@ -71,15 +77,17 @@ namespace ApplicationCasier
 				}
 			
 			}
-			// l'adaptateur pour la listview des mots de passe :
+			// l'adaptateur pour la listView des mots de passe :
 			mAdaptater_mdp = new ArrayAdapter (this, 
 										   Resource.Layout.LockerRow, 
 										   Resource.Id.textview_1, 
 										   list_mdp); 
+			// l'adaptateur de listeView pour les casiers
 			mAdaptateur_locker = new ArrayAdapter (this, 
 										   Resource.Layout.LockerRow,
 						 				   Resource.Id.textview_1,
 										   list_locker); 
+
 			listview_mdp.Adapter = mAdaptater_mdp; 
 			listview_locker.Adapter = mAdaptateur_locker;
 		}

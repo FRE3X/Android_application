@@ -1,0 +1,1 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minWidth="300dp" android:minHeight="400dp"><Button android:id="@+id/mybutton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="coucou" /></RelativeLayout>

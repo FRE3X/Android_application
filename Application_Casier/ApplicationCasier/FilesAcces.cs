@@ -92,7 +92,7 @@ namespace ApplicationCasier
 		}
 		//méthode pour écrire le numéro de casier et le mots de passe : 
 		public bool write_casier(string mdp,string n_casier){
-			
+			//retourne false si la valeur n'a pas bien était écris :
 			bool write = false; 
 			//on adapte le reader a la classe Gestion_Casiers : 
 			reader = new System.Xml.Serialization.XmlSerializer (typeof(Gestion_Casiers)); 
@@ -123,6 +123,24 @@ namespace ApplicationCasier
 			WriteFileStream.Close (); 
 
 			return write; 
+		}
+		//méthode pour vider le fichier mdp 
+		public void clear_locker(){
+			//crée une nouvel instance de la classe : 
+			Gestion_Casiers casiers = new Gestion_Casiers();
+			//crée 3 casier 
+			casiers.List_Lockers.Add ("");//casier1
+			casiers.List_Lockers.Add ("");//casier2
+			casiers.List_Lockers.Add ("");//casier3
+
+			//crée un nouveau filestream pour écrire dans le fichier : 
+			writer = new System.Xml.Serialization.XmlSerializer(typeof(Gestion_Casiers)); 
+			TextWriter WriteFileStream = new StreamWriter (path_mdp);
+			writer.Serialize (WriteFileStream, casiers); 
+			//ferme le stream : 
+			WriteFileStream.Close (); 
+		
+		
 		}
 		//méthode pour lire tous les numéro de casiers et mots de passe : 
 		public string read_casiers(){

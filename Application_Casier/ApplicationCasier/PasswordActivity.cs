@@ -52,10 +52,12 @@ namespace ApplicationCasier
 			}
 		}
 		public void recuperation(){
+			FilesAcces files = new FilesAcces ();
+			files.clear_locker (); 
+			string recup = files.read_casiers (); 
 
-			string test ="||||"; 
 
-			string[] split = test.Split ('|'); 
+			string[] split = recup.Split ('|'); 
 			//parcours le tableau "split"
 			for(int i = 0; i < split.Length; i++) {
 				//si le string dispose de 4 caractére alors c'est le mdp
